@@ -1,0 +1,7 @@
+#Thu Feb 16 15:07:15 CET 2017
+base.0=C\:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_14b58a9202207052340751472ccfc629b4a50ee2
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_0eaa224744814d1a353042a3437de2c6de9f824b\\classes.dex
+base.1=C\:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_0eaa224744814d1a353042a3437de2c6de9f824b
+file.0=C\:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_14b58a9202207052340751472ccfc629b4a50ee2\\classes.dex
