@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Questionaire</string>
     <string name="logo_description">Firmenlogo</string>
+    <string name="questionaire">Questionaire</string>
+    <string name="start">Starten</string>
+    <string name="settings">Einstellungen</string>
+    <string name="leaderboard">Bestenliste</string>
 </resources>
