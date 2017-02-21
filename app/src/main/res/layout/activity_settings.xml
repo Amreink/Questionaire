@@ -10,4 +10,20 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="tkapps.questionaire.SettingsActivity">
 
+    <TextView
+        android:id="@+id/textView_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        />
+
+    <ListView
+        android:id="@+id/listView_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_settings"
+        />
+
 </RelativeLayout>

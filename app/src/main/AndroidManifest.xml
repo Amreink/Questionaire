@@ -21,6 +21,7 @@
             android:name=".QuizActivity"
             android:screenOrientation="portrait"></activity>
         <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".LeaderboardActivity"></activity>
     </application>
 
 </manifest>

@@ -10,7 +10,7 @@ public class QuizActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_quiz);
 
 
         //Stringarray mit Beispieldaten für die ListView erstellt
@@ -30,7 +30,7 @@ public class QuizActivity extends AppCompatActivity {
                 answerlistArray);
 
         //Erstellen der ListView und Anbindung des Adapters
-        ListView list_answer = (ListView)findViewById(R.id.list_answer);
+        ListView list_answer = (ListView)findViewById(R.id.listView_answer);
         list_answer.setAdapter(answerlistAdapter);
     }
 }

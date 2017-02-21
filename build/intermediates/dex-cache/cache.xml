@@ -3,156 +3,156 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_d6e3589e9990a0abf77c0ff34823a0f9b92e022f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_931b0a812a2bd463c885a1d72b6149a3bd201648\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_3341940cdaf3df179cc097ea5bef8bc81699720e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_db6f5434ca0e7c8034c80dca3a5ede684b4da15f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_0300034ee20e8a70a11b6f821d0b24606af0977f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Timo-\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
-        <dex dex="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_6761528e49be18dfd76682cc3b6190047b2dc2f9\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_9243eaeaf6815b18b4b9f0c85e7190367c944f5f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_00e3ca043e65e9cd15e7b0bcc6fb7dff9aa1d52f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_fdbe223dc89cafa93e7a6efe5cf83e8f151fe6b2\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_20446d9ce3a00327ca26c9de5efeec56ed3bedab\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="356b9dfd67c872e2da626ce28e9218fdf22f2c31">
-        <dex dex="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_384c05ef9a1fbaf045e868c9a0aa9e0df8c94305\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_3afe620f27edec20566a22ee7ab5f936856057c1\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ea16c329a1b977661375052883a1b5b090204b77">
-        <dex dex="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_b8b31601ed6f0f0cfc450c725b73f584af965b30\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_890ffed80dfba988c54f229b0e8f03a5a70db4a9\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_ae988c984da8b223113336ed663d659943ac8048\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_36e2e52767060f24dd27e9e0e024bdf5bf35bc71\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jar="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\Timo-\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_8a5f01ce0281f6261694c82bea25a0376ae82cce\classes.dex" />
+        <dex dex="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_0b7f655e26082ff3bde207e3985ece374eefbd1a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_35f4a13ff603459373dfb29b71a1608b8018a869\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_4285373014126c333d91d3fa17cd948602378895\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_30052de91f19224b9f2fde206b2967c957384732\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_d94fc1ff4ddc54d73834600ce588cda6fa96e183\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_092e183f290e1cba24f0040fb852cecbda0284c1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6ddd65c094581f8e671596eddd43295eda801cd2">
+        <dex dex="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_333ff38a66c1b28b7805045f96d3e5d0e31e4692\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e64da1637366ca6af22701f58b59e929b83fd611">
+        <dex dex="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_d356b465368d76e4f946e7c8feef90d0c25edc45\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_1780dab275745127dc5146341cf815173af1ed00\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_abeebd0726c223bb9b140e2f33de612fc49b7298\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_607a640fa7f64804911625fe155978af1a0ef2bc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_4bcdc287eb556b89c521fbadbe56dda929188e7e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_ce9cea5baf0523fc486f596b52bdf356234167a6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_ff92d8fcab35a39fcefb3d1ad24e9260f771b7ed\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Timo\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_f35f2c6aa9e0f0d36b836fe41f5faf6057acd715\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_fa33e0ffe5498ab2142097c8f2de6e19f699ae61\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_4fc38dd30ab1e076c316376bd4cb1e68e4db97a7\classes.dex" />
     </item>
 
 </items>

@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         button_leaderboard.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                Intent intent = new Intent(MainActivity.this, LeaderboardActivity.class);
                 startActivity(intent);
             }
         });
