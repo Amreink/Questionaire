@@ -24,9 +24,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tkapps.questionaire.Main2Activity"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:name="tkapps.questionaire.QuizActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="tkapps.questionaire.Settings" />
     </application>
 
 </manifest>
