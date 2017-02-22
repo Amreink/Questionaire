@@ -1,4 +1,4 @@
-#Thu Feb 16 17:36:56 CET 2017
+#Wed Feb 22 14:03:16 CET 2017
 base.0=C\:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_14b58a9202207052340751472ccfc629b4a50ee2
 renamed.1=classes2.dex
 renamed.0=classes.dex

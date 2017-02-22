@@ -18,11 +18,11 @@ public class MainActivity extends AppCompatActivity {
         Button button_settings = (Button) findViewById(R.id.button_settings);
         Button button_leaderboard = (Button) findViewById(R.id.button_leaderboard);
 
-        //Button button_start ruft die Main2Activity auf
+        //Button button_start ruft die QuizActivity auf
         button_start.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+                Intent intent = new Intent(MainActivity.this, QuizActivity.class);
                 startActivity(intent);
             }
         });
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         button_settings.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Settings.class);
+                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
                 startActivity(intent);
             }
         });
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         button_leaderboard.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Settings.class);
+                Intent intent = new Intent(MainActivity.this, LeaderboardActivity.class);
                 startActivity(intent);
             }
         });

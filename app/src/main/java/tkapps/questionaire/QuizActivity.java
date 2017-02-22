@@ -5,12 +5,12 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class Main2Activity extends AppCompatActivity {
+public class QuizActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_quiz);
 
 
         //Stringarray mit Beispieldaten für die ListView erstellt
@@ -18,8 +18,7 @@ public class Main2Activity extends AppCompatActivity {
                 "Antwort 1",
                 "Antwort 2",
                 "Antwort 3",
-                "Antwort 4",
-                "Antwort 5"
+                "Antwort 4"
         };
 
         //Arrayadapter für die Listview erstellt
@@ -30,7 +29,7 @@ public class Main2Activity extends AppCompatActivity {
                 answerlistArray);
 
         //Erstellen der ListView und Anbindung des Adapters
-        ListView list_answer = (ListView)findViewById(R.id.list_answer);
+        ListView list_answer = (ListView)findViewById(R.id.listView_answer);
         list_answer.setAdapter(answerlistAdapter);
     }
 }

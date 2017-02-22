@@ -8,6 +8,67 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="tkapps.questionaire.Settings">
+    tools:context="tkapps.questionaire.SettingsActivity">
+
+    <TextView
+        android:id="@+id/textView_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
+        android:clickable="false"
+        android:layout_below="@+id/textView_settings"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/holo_blue_dark">
+
+        <Button
+            android:text="@string/xml_import"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/button_edit"
+            android:layout_toLeftOf="@+id/textView"
+            android:layout_toStartOf="@+id/textView"
+            android:id="@+id/button_import"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="@string/xml_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/button_edit"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="@string/xml_export"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_toRightOf="@+id/textView"
+            android:layout_toEndOf="@+id/textView"
+            android:id="@+id/button_export"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:text="@string/xml"
+            android:textSize="30sp"
+            android:layout_weight="1"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="none"
+            android:textColor="@android:color/background_light" />
+    </RelativeLayout>
 
 </RelativeLayout>

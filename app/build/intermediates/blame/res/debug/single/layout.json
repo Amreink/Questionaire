@@ -40,10 +40,6 @@
         "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_expanded_menu_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main2.xml",
-        "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\src\\main\\res\\layout\\activity_main2.xml"
-    },
-    {
         "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
         "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
@@ -76,6 +72,10 @@
         "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_alert_dialog_material.xml"
     },
     {
+        "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_leaderboard.xml",
+        "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\src\\main\\res\\layout\\activity_leaderboard.xml"
+    },
+    {
         "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_header_item_layout.xml",
         "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_popup_menu_header_item_layout.xml"
     },
@@ -86,6 +86,14 @@
     {
         "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
         "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_quiz.xml",
+        "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\src\\main\\res\\layout\\activity_quiz.xml"
+    },
+    {
+        "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_settings.xml",
+        "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\src\\main\\res\\layout\\activity_settings.xml"
     },
     {
         "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",

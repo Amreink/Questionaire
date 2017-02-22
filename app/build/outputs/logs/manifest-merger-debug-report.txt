@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:2:1-26:12
+ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:2:1-27:12
 	package
 		ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:3:5-34
 		INJECTED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\Andr
 		INJECTED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml
 application
-ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:5:5-24:19
+ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:5:5-25:19
 MERGED from [com.android.support:appcompat-v7:24.2.1] C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:24.2.1] C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-fragment:24.2.1] C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\AndroidManifest.xml:25:5-20
@@ -40,26 +40,30 @@ ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\Andr
 		ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:13:13-49
 	android:name
 		ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:12:13-41
-intent-filter#android.i8ntent.action.MAIN+android.intent.category.LAUNCHER
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:14:13-18:29
-action#android.i8ntent.action.MAIN
-ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:15:17-70
+action#android.intent.action.MAIN
+ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:15:17-69
 	android:name
-		ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:15:25-67
+		ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:15:25-66
 category#android.intent.category.LAUNCHER
 ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:17:17-77
 	android:name
 		ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:17:27-74
-activity#tkapps.questionaire.Main2Activity
+activity#tkapps.questionaire.QuizActivity
 ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:20:9-22:61
 	android:screenOrientation
 		ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:22:13-49
 	android:name
-		ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:21:13-42
-activity#tkapps.questionaire.Settings
-ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:23:9-55
+		ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:21:13-41
+activity#tkapps.questionaire.SettingsActivity
+ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:23:9-63
 	android:name
-		ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:23:19-43
+		ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:23:19-51
+activity#tkapps.questionaire.LeaderboardActivity
+ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:24:9-66
+	android:name
+		ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:24:19-54
 uses-sdk
 INJECTED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:24.2.1] C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\AndroidManifest.xml:21:5-23:78

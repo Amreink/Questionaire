@@ -19,15 +19,16 @@
             android:name="tkapps.questionaire.MainActivity"
             android:screenOrientation="portrait" >
             <intent-filter>
-                <action android:name="android.i8ntent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="tkapps.questionaire.Main2Activity"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:name="tkapps.questionaire.QuizActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="tkapps.questionaire.SettingsActivity" />
+        <activity android:name="tkapps.questionaire.LeaderboardActivity" />
     </application>
 
 </manifest>
