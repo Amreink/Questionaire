@@ -28,19 +28,19 @@ public class DataStore {
         return dataStore;
     }
 
-    private static ContentValues getContentValues(String question, String answer1, String answer2, String answer3, String answer4, String correct_answer){
+    private static ContentValues getContentValues(Questions questions){
         ContentValues values = new ContentValues();
-        values.put(DbSchema.Table.Columns.QUESTION, question);
-        values.put(DbSchema.Table.Columns.ANSWER1, answer1);
-        values.put(DbSchema.Table.Columns.ANSWER2, answer2);
-        values.put(DbSchema.Table.Columns.ANSWER3, answer3);
-        values.put(DbSchema.Table.Columns.ANSWER4, answer4);
-        values.put(DbSchema.Table.Columns.CORRECT_ANSWER, correct_answer);
+        values.put(DbSchema.Table.Columns.QUESTION, questions.getQuestion());
+        values.put(DbSchema.Table.Columns.ANSWER1, questions.getAnswer1());
+        values.put(DbSchema.Table.Columns.ANSWER2, questions.getAnswer2());
+        values.put(DbSchema.Table.Columns.ANSWER3, questions.getAnswer3());
+        values.put(DbSchema.Table.Columns.ANSWER4, questions.getAnswer4());
+        values.put(DbSchema.Table.Columns.CORRECT_ANSWER, questions.getCorrect_answer());
         return values;
     }
 
-    public void addQuestion(String question, String answer1, String answer2, String answer3, String answer4, String correct_answer){
-        ContentValues values = getContentValues(question, answer1, answer2, answer3, answer4, correct_answer);
+    public void addQuestion(Questions questions){
+        ContentValues values = getContentValues(questions);
         db.insert(DbSchema.Table.NAME, null, values);
     }
     private DbCursorWrapper queryQuestions(String whereClause, String[] whereArgs){

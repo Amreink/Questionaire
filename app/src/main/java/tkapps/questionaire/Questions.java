@@ -1,16 +1,10 @@
 package tkapps.questionaire;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 /**
  * Created by behrends on 16/02/2017.
  */
 
 public class Questions {
-    private static List questions;     // lectures is a singleton
-
     private String question;
     private String answer1;
     private String answer2;

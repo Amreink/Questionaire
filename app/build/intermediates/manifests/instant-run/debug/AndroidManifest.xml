@@ -26,9 +26,16 @@
         </activity>
         <activity
             android:name="tkapps.questionaire.QuizActivity"
-            android:screenOrientation="portrait" />
-        <activity android:name="tkapps.questionaire.SettingsActivity" />
-        <activity android:name="tkapps.questionaire.LeaderboardActivity" />
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="tkapps.questionaire.SettingsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="tkapps.questionaire.LeaderboardActivity"
+            android:screenOrientation="portrait" >
+        </activity>
     </application>
 
 </manifest>
