@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Questionnaire xmlns:android="http://schemas.android.com/apk/res/android">
+    <Frage1>
+        <Frage>Wie hei࠴ unser Unternehmen?</Frage>
+        <Antwort1>Evonik Industries</Antwort1>
+        <Antwort2>Aluminium Rheinfelden</Antwort2>
+        <Antwort3>CLC Unternehmensberatung</Antwort3>
+        <Antwort4>Deutsche Telekom</Antwort4>
+        <Korrekte_Antwort>3</Korrekte_Antwort>
+    </Frage1>
+    <Frage2>
+        <Frage>Wie viele Mitarbeiter hat unser Unternehmen</Frage>
+        <Antwort1>5</Antwort1>
+        <Antwort2>8</Antwort2>
+        <Antwort3>12</Antwort3>
+        <Antwort4>27</Antwort4>
+        <Korrekte_Antwort>2</Korrekte_Antwort>
+    </Frage2>
+    <Frage3>
+        <Frage>Wie viele unterschiedliche Produkte bieten wir an?</Frage>
+        <Antwort1>3</Antwort1>
+        <Antwort2>ca. 712</Antwort2>
+        <Antwort3>ca. 1.500</Antwort3>
+        <Antwort4>ca. 23.000</Antwort4>
+        <Korrekte_Antwort>1</Korrekte_Antwort>
+    </Frage3>
+</Questionnaire>

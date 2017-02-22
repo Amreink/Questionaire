@@ -18,8 +18,7 @@ public class QuizActivity extends AppCompatActivity {
                 "Antwort 1",
                 "Antwort 2",
                 "Antwort 3",
-                "Antwort 4",
-                "Antwort 5"
+                "Antwort 4"
         };
 
         //Arrayadapter für die Listview erstellt

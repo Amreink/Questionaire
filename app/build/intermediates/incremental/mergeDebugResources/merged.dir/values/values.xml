@@ -336,6 +336,10 @@
     <string name="settings">Einstellungen</string>
     <string name="start">Starten</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="xml">XML-Import</string>
+    <string name="xml_edit">Bearbeiten</string>
+    <string name="xml_export">Export</string>
+    <string name="xml_import">Import</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
