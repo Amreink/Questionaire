@@ -513,9 +513,9 @@ int id always 0x7f0b001d
 int id beginning 0x7f0b001a
 int id bottom 0x7f0b0022
 int id buttonPanel 0x7f0b002e
-int id button_edit 0x7f0b0064
-int id button_export 0x7f0b0067
-int id button_import 0x7f0b0066
+int id button_editXML 0x7f0b0064
+int id button_exportXML 0x7f0b0067
+int id button_importXML 0x7f0b0066
 int id button_leaderboard 0x7f0b005b
 int id button_settings 0x7f0b005a
 int id button_start 0x7f0b0059
@@ -592,7 +592,7 @@ int id tabMode 0x7f0b000b
 int id text 0x7f0b0073
 int id text2 0x7f0b0071
 int id textSpacerNoButtons 0x7f0b0037
-int id textView 0x7f0b0065
+int id textView_XML 0x7f0b0065
 int id textView_leaderboard 0x7f0b0056
 int id textView_question 0x7f0b0060
 int id textView_settings 0x7f0b0062
@@ -696,6 +696,7 @@ int string xml 0x7f060027
 int string xml_edit 0x7f060028
 int string xml_export 0x7f060029
 int string xml_import 0x7f06002a
+int string xml_path 0x7f06002b
 int style AlertDialog_AppCompat 0x7f08008a
 int style AlertDialog_AppCompat_Light 0x7f08008b
 int style Animation_AppCompat_Dialog 0x7f08008c

@@ -1806,9 +1806,9 @@ containing a value of this type.
         public static final int beginning=0x7f0b001a;
         public static final int bottom=0x7f0b0022;
         public static final int buttonPanel=0x7f0b002e;
-        public static final int button_edit=0x7f0b0064;
-        public static final int button_export=0x7f0b0067;
-        public static final int button_import=0x7f0b0066;
+        public static final int button_editXML=0x7f0b0064;
+        public static final int button_exportXML=0x7f0b0067;
+        public static final int button_importXML=0x7f0b0066;
         public static final int button_leaderboard=0x7f0b005b;
         public static final int button_settings=0x7f0b005a;
         public static final int button_start=0x7f0b0059;
@@ -1885,7 +1885,7 @@ containing a value of this type.
         public static final int text=0x7f0b0073;
         public static final int text2=0x7f0b0071;
         public static final int textSpacerNoButtons=0x7f0b0037;
-        public static final int textView=0x7f0b0065;
+        public static final int textView_XML=0x7f0b0065;
         public static final int textView_leaderboard=0x7f0b0056;
         public static final int textView_question=0x7f0b0060;
         public static final int textView_settings=0x7f0b0062;
@@ -1997,6 +1997,7 @@ containing a value of this type.
         public static final int xml_edit=0x7f060028;
         public static final int xml_export=0x7f060029;
         public static final int xml_import=0x7f06002a;
+        public static final int xml_path=0x7f06002b;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f08008a;

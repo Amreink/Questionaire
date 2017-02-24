@@ -5,40 +5,47 @@
     density="560dpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="21935187930136"
-    token="2763160741685149440"
-    verifier="COLD_SWAP_REQUESTED" >
+    timestamp="253919738751594"
+    token="4100056822720776520"
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="180" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="30" />
+        duration="0" />
     <task
         name="verifier"
-        duration="6" />
+        duration="0" />
 
     <artifact
-        location="C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
-        type="DEX" />
+        location="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+        type="RESOURCES" />
 
     <build
-        timestamp="21641449317889"
-        verifier="MANIFEST_FILE_CHANGE" >
+        timestamp="250852257843608"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\build\outputs\apk\app-debug.apk"
+            location="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="21935187930136"
-        verifier="COLD_SWAP_REQUESTED" >
+        timestamp="253091095388539"
+        verifier="R_CLASS_CHANGE" >
         <artifact
-            location="C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+            location="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
             type="DEX" />
+    </build>
+    <build
+        timestamp="253919738751594"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>

@@ -27,9 +27,9 @@ import tkapps.questionaire.data.DataStore;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        Button button_import = (Button)findViewById(R.id.button_import);
-        Button button_edit = (Button)findViewById(R.id.button_edit);
-        Button button_export = (Button)findViewById(R.id.button_export);
+        Button button_import = (Button)findViewById(R.id.button_importXML);
+        Button button_edit = (Button)findViewById(R.id.button_editXML);
+        Button button_export = (Button)findViewById(R.id.button_exportXML);
 
         //Datenbankanbindung
         dataStore = DataStore.getInstance(getApplicationContext());
