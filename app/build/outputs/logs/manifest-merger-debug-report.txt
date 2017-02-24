@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Timo\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:2:1-32:12
+ADDED from C:\Users\Timo\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:2:1-35:12
 	package
 		ADDED from C:\Users\Timo\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:3:5-34
 		INJECTED from C:\Users\Timo\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from C:\Users\Timo\AndroidStudioProjects\Questionaire\app\src\main\Android
 		INJECTED from C:\Users\Timo\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Timo\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml
 application
-ADDED from C:\Users\Timo\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:5:5-30:19
+ADDED from C:\Users\Timo\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:5:5-33:19
 MERGED from [com.android.support:appcompat-v7:24.2.1] C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:24.2.1] C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-fragment:24.2.1] C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\AndroidManifest.xml:25:5-20
@@ -68,6 +68,12 @@ ADDED from C:\Users\Timo\AndroidStudioProjects\Questionaire\app\src\main\Android
 		ADDED from C:\Users\Timo\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:28:9-45
 	android:name
 		ADDED from C:\Users\Timo\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:27:19-54
+activity#tkapps.questionaire.ListFilesActivity
+ADDED from C:\Users\Timo\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:30:9-32:20
+	android:screenOrientation
+		ADDED from C:\Users\Timo\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:31:13-49
+	android:name
+		ADDED from C:\Users\Timo\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:30:19-52
 uses-sdk
 INJECTED from C:\Users\Timo\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:24.2.1] C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\AndroidManifest.xml:21:5-23:78

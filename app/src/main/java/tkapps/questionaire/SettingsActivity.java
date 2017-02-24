@@ -1,5 +1,6 @@
 package tkapps.questionaire;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -39,7 +40,9 @@ import tkapps.questionaire.data.DataStore;
         button_import.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                try {
+                Intent intent = new Intent(SettingsActivity.this, ListFilesActivity.class);
+                startActivity(intent);
+                /*try {
                     InputStream is = getAssets().open("xml_questionnaire.xml");
 
                     DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -67,7 +70,7 @@ import tkapps.questionaire.data.DataStore;
                         }
                     }
 
-                } catch (Exception e) {e.printStackTrace();}
+                } catch (Exception e) {e.printStackTrace();}*/
 
             }
 

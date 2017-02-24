@@ -27,6 +27,9 @@
         <activity android:name=".LeaderboardActivity"
         android:screenOrientation="portrait">
         </activity>
+        <activity android:name=".ListFilesActivity"
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>

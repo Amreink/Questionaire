@@ -1,4 +1,4 @@
-#Fri Feb 24 13:02:50 CET 2017
+#Fri Feb 24 16:07:43 CET 2017
 base.0=C\:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_d356b465368d76e4f946e7c8feef90d0c25edc45
 renamed.1=classes.dex
 renamed.0=classes2.dex

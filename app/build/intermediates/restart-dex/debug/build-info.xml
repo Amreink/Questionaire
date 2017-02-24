@@ -5,47 +5,67 @@
     density="560dpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="253919738751594"
+    timestamp="262357937919745"
     token="4100056822720776520"
     verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="319" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="6" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="22" />
     <task
         name="verifier"
-        duration="0" />
+        duration="2" />
 
     <artifact
-        location="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
-        type="RESOURCES" />
+        location="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\reload-dex\debug\classes.dex"
+        type="RELOAD_DEX" />
 
     <build
-        timestamp="250852257843608"
+        timestamp="261945236497741"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="253091095388539"
-        verifier="R_CLASS_CHANGE" >
+        timestamp="262041595193227"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+            type="RESOURCES" />
+        <artifact
+            location="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
+            type="DEX" />
         <artifact
             location="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
             type="DEX" />
     </build>
     <build
-        timestamp="253919738751594"
+        timestamp="262203321319513"
         verifier="COMPATIBLE" >
         <artifact
-            location="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
-            type="RESOURCES" />
+            location="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\builds\debug\262203321319513\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="262244454791186"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\builds\debug\262244454791186\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="262357937919745"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\Timo\AndroidStudioProjects\Questionaire\app\build\intermediates\reload-dex\debug\classes.dex"
+            type="RELOAD_DEX" />
     </build>
 
 </instant-run>
