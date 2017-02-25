@@ -1,10 +1,12 @@
 package tkapps.questionaire;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         Button button_leaderboard = (Button) findViewById(R.id.button_leaderboard);
 
         //Button button_start ruft die QuizActivity auf
-        button_start.setOnClickListener(new View.OnClickListener(){
+        button_start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, QuizActivity.class);
@@ -28,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Button button_settings ruft die Einstellungen auf
-        button_settings.setOnClickListener(new View.OnClickListener(){
+        button_settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
@@ -37,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Button button_settings ruft die Bestenliste auf
-        button_leaderboard.setOnClickListener(new View.OnClickListener(){
+        button_leaderboard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, LeaderboardActivity.class);

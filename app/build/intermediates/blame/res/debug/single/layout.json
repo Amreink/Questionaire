@@ -4,12 +4,12 @@
         "source": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
     {
-        "merged": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\answer_items.xml",
-        "source": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\src\\main\\res\\layout\\answer_items.xml"
-    },
-    {
         "merged": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
         "source": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\answer_items.xml",
+        "source": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\src\\main\\res\\layout\\answer_items.xml"
     },
     {
         "merged": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
@@ -42,6 +42,10 @@
     {
         "merged": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
         "source": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_password.xml",
+        "source": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\src\\main\\res\\layout\\activity_password.xml"
     },
     {
         "merged": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
@@ -118,6 +122,10 @@
     {
         "merged": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
         "source": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_setpassword.xml",
+        "source": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\src\\main\\res\\layout\\activity_setpassword.xml"
     },
     {
         "merged": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",

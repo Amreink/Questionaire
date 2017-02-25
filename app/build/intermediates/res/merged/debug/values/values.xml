@@ -329,11 +329,17 @@
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="app_name">Questionaire</string>
+    <string name="confirm">Bestätigen</string>
+    <string name="enter_password">Passworteingabe</string>
+    <string name="hint">...</string>
     <string name="leaderboard">Bestenliste</string>
     <string name="logo_description">Firmenlogo</string>
+    <string name="password">Passwort</string>
     <string name="questionaire">Questionaire</string>
     <string name="search_menu_title">Search</string>
     <string name="settings">Einstellungen</string>
+    <string name="setup_password">Passwort festlegen</string>
+    <string name="sign_in">Anmelden</string>
     <string name="start">Starten</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="xml">XML-Import</string>
