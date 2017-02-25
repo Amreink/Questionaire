@@ -1809,7 +1809,7 @@ containing a value of this type.
         public static final int beginning=0x7f0b001a;
         public static final int bottom=0x7f0b0022;
         public static final int buttonPanel=0x7f0b002e;
-        public static final int button_confirmPIN=0x7f0b0068;
+        public static final int button_confirmPassword=0x7f0b0068;
         public static final int button_editXML=0x7f0b006c;
         public static final int button_enterPassword=0x7f0b0061;
         public static final int button_exportXML=0x7f0b006f;
@@ -1891,11 +1891,11 @@ containing a value of this type.
         public static final int text=0x7f0b007b;
         public static final int text2=0x7f0b0079;
         public static final int textSpacerNoButtons=0x7f0b0037;
-        public static final int textView_PIN=0x7f0b005f;
         public static final int textView_XML=0x7f0b006d;
         public static final int textView_leaderboard=0x7f0b0056;
+        public static final int textView_password=0x7f0b005f;
         public static final int textView_question=0x7f0b0065;
-        public static final int textView_setPIN=0x7f0b0067;
+        public static final int textView_setPassword=0x7f0b0067;
         public static final int textView_settings=0x7f0b006a;
         public static final int time=0x7f0b0077;
         public static final int title=0x7f0b002d;

@@ -516,7 +516,7 @@ int id always 0x7f0b001d
 int id beginning 0x7f0b001a
 int id bottom 0x7f0b0022
 int id buttonPanel 0x7f0b002e
-int id button_confirmPIN 0x7f0b0068
+int id button_confirmPassword 0x7f0b0068
 int id button_editXML 0x7f0b006c
 int id button_enterPassword 0x7f0b0061
 int id button_exportXML 0x7f0b006f
@@ -598,11 +598,11 @@ int id tabMode 0x7f0b000b
 int id text 0x7f0b007b
 int id text2 0x7f0b0079
 int id textSpacerNoButtons 0x7f0b0037
-int id textView_PIN 0x7f0b005f
 int id textView_XML 0x7f0b006d
 int id textView_leaderboard 0x7f0b0056
+int id textView_password 0x7f0b005f
 int id textView_question 0x7f0b0065
-int id textView_setPIN 0x7f0b0067
+int id textView_setPassword 0x7f0b0067
 int id textView_settings 0x7f0b006a
 int id time 0x7f0b0077
 int id title 0x7f0b002d

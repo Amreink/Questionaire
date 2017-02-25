@@ -25,7 +25,7 @@ public class SettingsActivity extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
 
-           /* //shared data vorbereiten
+            //shared data vorbereiten
             pref = getSharedPreferences("Questionaire", MODE_PRIVATE);
             editor = pref.edit();
 
@@ -41,7 +41,7 @@ public class SettingsActivity extends AppCompatActivity {
 
             setContentView(R.layout.activity_setpassword);
 
-            Button confirmButton = (Button) findViewById(R.id.button_confirmPIN);
+            Button confirmButton = (Button) findViewById(R.id.button_confirmPassword);
             confirmButton.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v){
@@ -50,9 +50,10 @@ public class SettingsActivity extends AppCompatActivity {
 
                     editor.putString("password", password.getText().toString());
                     editor.commit();
+                    showSettings();
                 }
             });
-            showSettings();
+
         }
         //Aufforderung zur Passworteingabe falls bereits ein Passwort erstellt wurde
         public void enterPassword() {
@@ -74,7 +75,7 @@ public class SettingsActivity extends AppCompatActivity {
             });
         }
 
-        public void showSettings() {*/
+        public void showSettings() {
 
             setContentView(R.layout.activity_settings);
 
