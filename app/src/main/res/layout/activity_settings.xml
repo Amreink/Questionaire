@@ -25,7 +25,7 @@
         android:layout_marginTop="30dp"
         android:clickable="false"
         android:background="@android:color/holo_blue_dark"
-        android:id="@+id/relativeLayout"
+        android:id="@+id/relativeLayoutXML"
         android:layout_below="@+id/textView_settings"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
@@ -85,6 +85,35 @@
             android:layout_marginTop="10dp"
             android:id="@+id/textView_path"
             android:clickable="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:clickable="false"
+        android:background="@android:color/holo_blue_dark"
+        android:id="@+id/relativeLayoutPassword"
+        android:layout_below="@+id/relativeLayoutXML"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/textView_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/password"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textSize="30sp"
+            />
+        <Button
+            android:id="@+id/button_changePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_password"
+            android:text="@string/change_password"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
     </RelativeLayout>
 
 </RelativeLayout>

@@ -12,6 +12,7 @@
     <string name="xml_path">Dateipfad</string>
     <string name="enter_password">Passworteingabe</string>
     <string name="setup_password">Passwort festlegen</string>
+    <string name="change_password">Passwort ändern</string>
     <string name="password">Passwort</string>
     <string name="hint">...</string>
     <string name="sign_in">Anmelden</string>
