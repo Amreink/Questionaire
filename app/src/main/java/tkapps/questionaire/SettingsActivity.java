@@ -7,11 +7,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+
+import java.io.InputStream;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 
 import tkapps.questionaire.data.DataStore;
 
@@ -36,6 +43,30 @@ public class SettingsActivity extends AppCompatActivity {
                 enterPassword();
             }
         }
+
+        @Override
+        protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+            // TODO Auto-generated method stub
+            if (requestCode == 1) {
+                if(resultCode == this.RESULT_OK) {
+                    String newDir = data.getStringExtra(
+                            FileBrowserActivity.returnDirectoryParameter);
+                    Toast.makeText(
+                            this,
+                            "Received path from file browser:"+newDir,
+                            Toast.LENGTH_LONG
+                    ).show();
+                } else {//if(resultCode == this.RESULT_OK) {
+                    Toast.makeText(
+                            this,
+                            "Received NO result from file browser",
+                            Toast.LENGTH_LONG)
+                            .show();
+                }//END } else {//if(resultCode == this.RESULT_OK) {
+            }//if (requestCode == REQUEST_CODE_PICK_FILE_TO_SAVE_INTERNAL) {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
+
         //Hier wird das Passwort gesetzt, falls noch keines vorhanden war
         public void setPassword(){
 
@@ -79,21 +110,44 @@ public class SettingsActivity extends AppCompatActivity {
 
             setContentView(R.layout.activity_settings);
 
+            TextView textView_path = (TextView) findViewById(R.id.textView_path);
             Button button_import = (Button) findViewById(R.id.button_importXML);
             Button button_edit = (Button) findViewById(R.id.button_editXML);
             Button button_export = (Button) findViewById(R.id.button_exportXML);
 
             //Datenbankanbindung
             dataStore = DataStore.getInstance(getApplicationContext());
+
+            //ImportPfad auswählen
+            textView_path.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent fileExploreIntent = new Intent(
+                        FileBrowserActivity.INTENT_ACTION_SELECT_DIR,
+                        null,
+                        SettingsActivity.this,
+                        FileBrowserActivity.class
+                    );
+//  fileExploreIntent.putExtra(
+//      ua.com.vassiliev.androidfilebrowser.FileBrowserActivity.startDirectoryParameter,
+//      "/sdcard"
+//  );//Here you can add optional start directory parameter, and file browser will start from that directory.
+                    startActivityForResult(
+                        fileExploreIntent,
+                        1
+                    );
+                }
+            });
+
+
             //Xml einspielen
 
             //Button button_import soll eine XML importieren können
             button_import.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(SettingsActivity.this, ListFilesActivity.class);
-                    startActivity(intent);
-                /*try {
+
+                try {
                     InputStream is = getAssets().open("xml_questionnaire.xml");
 
                     DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -121,7 +175,7 @@ public class SettingsActivity extends AppCompatActivity {
                         }
                     }
 
-                } catch (Exception e) {e.printStackTrace();}*/
+                } catch (Exception e) {e.printStackTrace();}
 
                 }
 
