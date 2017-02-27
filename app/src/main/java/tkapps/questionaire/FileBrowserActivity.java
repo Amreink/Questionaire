@@ -11,13 +11,18 @@ package tkapps.questionaire;
 //  http://developer.android.com/guide/developing/projects/projects-eclipse.html#ReferencingLibraryProject
 
 //General Java imports 
+
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.StatFs;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -52,6 +57,7 @@ public class FileBrowserActivity extends Activity {
 	public static final String returnFileParameter = "filePathRet";
 	public static final String showCannotReadParameter = "showCannotRead";
 	public static final String filterExtension = "filterExtension";
+	public static final int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 0;
 
 	// Stores names of traversed directories
 	ArrayList<String> pathDirsList = new ArrayList<String>();
@@ -89,6 +95,38 @@ public class FileBrowserActivity extends Activity {
 		// If empty or null, will start from SDcard root.
 		setContentView(R.layout.filebrowser_layout);
 
+		//Checking if permission for external storage is given
+
+		if (ContextCompat.checkSelfPermission(this,
+				Manifest.permission.READ_EXTERNAL_STORAGE)
+				!= PackageManager.PERMISSION_GRANTED) {
+
+			// Should we show an explanation?
+			// Nicht nötig da Berechtigung angefragt wird
+			
+			if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+					Manifest.permission.READ_EXTERNAL_STORAGE)) {
+
+				// Show an explanation to the user *asynchronously* -- don't block
+				// this thread waiting for the user's response! After the user
+				// sees the explanation, try again to request the permission.
+
+			} else {
+
+				// No explanation needed, we can request the permission.
+
+				ActivityCompat.requestPermissions(this,
+						new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+						MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
+
+				// MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
+				// app-defined int constant. The callback method gets the
+				// result of the request.
+			}
+		}
+
+		// Assume thisActivity is the current activity
+
 		// Set action for this activity
 		Intent thisInt = this.getIntent();
 		currentAction = SELECT_DIRECTORY;// This would be a default action in
@@ -114,6 +152,32 @@ public class FileBrowserActivity extends Activity {
 		Log.d(LOGTAG, path.getAbsolutePath());
 	}
 
+	//Hier wird überprüft ob die Berechtigung vorhanden ist.
+	@Override
+	public void onRequestPermissionsResult(int requestCode,
+										   String permissions[], int[] grantResults) {
+		switch (requestCode) {
+			case MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE: {
+				// If request is cancelled, the result arrays are empty.
+				if (grantResults.length > 0
+						&& grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+					// permission was granted, yay! Do the
+					// contacts-related task you need to do.
+
+				} else {
+
+					// permission denied, boo! Disable the
+					// functionality that depends on this permission.
+				}
+				return;
+			}
+
+			// other 'case' lines to check for other
+			// permissions this app might request
+		}
+	}
+
 	private void setInitialDirectory() {
 		Intent thisInt = this.getIntent();
 		String requestedStartDir = thisInt
@@ -131,7 +195,7 @@ public class FileBrowserActivity extends Activity {
 					&& Environment.getExternalStorageDirectory().canRead())
 				path = Environment.getExternalStorageDirectory();
 			else
-				path = new File("/sdcard/");
+				path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
 		}// if(this.path==null) {//No or invalid directory supplied in intent
 			// parameter
 	}// private void setInitialDirectory() {
