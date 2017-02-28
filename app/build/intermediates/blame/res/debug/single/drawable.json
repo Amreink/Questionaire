@@ -48,12 +48,12 @@
         "source": "C:\\Users\\Timo-\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_ic_search_api_material.xml"
     },
     {
-        "merged": "C:\\Users\\Timo-\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
-        "source": "C:\\Users\\Timo-\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_ratingbar_indicator_material.xml"
-    },
-    {
         "merged": "C:\\Users\\Timo-\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\file_icon.png",
         "source": "C:\\Users\\Timo-\\AndroidStudioProjects\\Questionaire\\app\\src\\main\\res\\drawable\\file_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Timo-\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "C:\\Users\\Timo-\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_ratingbar_indicator_material.xml"
     },
     {
         "merged": "C:\\Users\\Timo-\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",

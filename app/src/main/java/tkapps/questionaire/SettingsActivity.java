@@ -70,6 +70,9 @@ public class SettingsActivity extends AppCompatActivity {
         //Hier wird das Passwort gesetzt, falls noch keines vorhanden war
         public void setPassword(){
 
+            editor.putString("password", "");
+            editor.commit();
+
             setContentView(R.layout.activity_setpassword);
 
             Button confirmButton = (Button) findViewById(R.id.button_confirmPassword);
@@ -81,6 +84,7 @@ public class SettingsActivity extends AppCompatActivity {
 
                     editor.putString("password", password.getText().toString());
                     editor.commit();
+                    Toast.makeText(SettingsActivity.this,"Passwort erfolgreich geändert.",Toast.LENGTH_LONG).show();
                     showSettings();
                 }
             });
@@ -99,7 +103,7 @@ public class SettingsActivity extends AppCompatActivity {
                     if (pref.getString("password", "").equals(password.getText().toString())) {
                         showSettings();
                     } else {
-                        Toast.makeText(SettingsActivity.this, "Passwort stimmt nicht.",
+                        Toast.makeText(SettingsActivity.this, "Passwort falsch.",
                                 Toast.LENGTH_LONG).show();
                     }
                 }
@@ -212,8 +216,6 @@ public class SettingsActivity extends AppCompatActivity {
             button_changePassword.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    editor.putString("password", "");
-                    editor.commit();
                     setPassword();
                 }
             });
