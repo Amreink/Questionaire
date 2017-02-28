@@ -12,6 +12,10 @@
         "source": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
+        "merged": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\questionaire_logo.png",
+        "source": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\src\\main\\res\\drawable\\questionaire_logo.png"
+    },
+    {
         "merged": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dir_up.png",
         "source": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\src\\main\\res\\drawable\\dir_up.png"
     },

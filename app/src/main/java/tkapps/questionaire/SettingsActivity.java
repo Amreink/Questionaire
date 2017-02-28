@@ -166,20 +166,37 @@ public class SettingsActivity extends AppCompatActivity {
                     element.normalize();
 
                     NodeList nList = doc.getElementsByTagName("FrageUndAntwort");
+                    //String[] values = {"Frage", "Antwort1","Anwort2","Antwort3","Antwort4","Korrekte_Antwort"};
 
                     for (int i=0; i<nList.getLength(); i++) {
 
                         Node node = nList.item(i);
                         if (node.getNodeType() == Node.ELEMENT_NODE) {
-                            Element element2 = (Element) node;
-                            String question = getValue("Frage", element2);
-                            String answer1 = getValue("Antwort1", element2);
-                            String answer2 = getValue("Antwort2", element2);
-                            String answer3 = getValue("Antwort3", element2);
-                            String answer4 = getValue("Antwort4", element2);
-                            String correct_answer =  getValue("Korrekte_Antwort", element2);
-                            Questions questions = new Questions(question, answer1, answer2, answer3, answer4, correct_answer);
-                            dataStore.addQuestion(questions);
+                            Element item = (Element) node;
+
+                            String question = getValue("Frage", item);
+                            String correct_answer =  getValue("Korrekte_Antwort", item);
+
+                            String[] dbAnswers = {
+                                    getValue("Antwort1", item),
+                                    getValue("Antwort2", item),
+                                    getValue("Antwort3", item),
+                                    getValue("Antwort4", item)
+                            };
+
+                            Answer[] answers = new Answer[4];
+
+                            for (int counter = 0; counter < 4; counter++) {
+                                boolean correctAnswer = false;
+                                if (Integer.parseInt(correct_answer) == counter) {
+                                    correctAnswer = true;
+                                }
+                                answers[counter] = new Answer(dbAnswers[counter], correctAnswer);
+                            }
+
+                            Interrogation interrogation = new Interrogation(
+                                    question, answers[0], answers[1], answers[2], answers[3]);
+                            dataStore.addQuestion(interrogation);
                         }
                     }
 

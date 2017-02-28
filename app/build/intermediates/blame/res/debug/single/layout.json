@@ -8,10 +8,6 @@
         "source": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\notification_template_media.xml"
     },
     {
-        "merged": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\answer_items.xml",
-        "source": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\src\\main\\res\\layout\\answer_items.xml"
-    },
-    {
         "merged": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
         "source": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_action_menu_layout.xml"
     },
@@ -100,6 +96,10 @@
         "source": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_screen_content_include.xml"
     },
     {
+        "merged": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_end.xml",
+        "source": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\src\\main\\res\\layout\\activity_end.xml"
+    },
+    {
         "merged": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_header_item_layout.xml",
         "source": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_popup_menu_header_item_layout.xml"
     },
@@ -118,6 +118,10 @@
     {
         "merged": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
         "source": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\answer_item.xml",
+        "source": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\src\\main\\res\\layout\\answer_item.xml"
     },
     {
         "merged": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",

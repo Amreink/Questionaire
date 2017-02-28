@@ -17,4 +17,7 @@
     <string name="hint">...</string>
     <string name="sign_in">Anmelden</string>
     <string name="confirm">Bestätigen</string>
+    <string name="score">Punkte</string>
+    <string name="question">Frage</string>
+    <string name="goOn">Weiter</string>
 </resources>

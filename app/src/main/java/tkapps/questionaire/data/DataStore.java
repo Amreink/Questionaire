@@ -8,7 +8,8 @@ import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 import java.util.List;
 
-import tkapps.questionaire.Questions;
+import tkapps.questionaire.Answer;
+import tkapps.questionaire.Interrogation;
 
 /**
  * Created by Karsten on 21.02.2017.
@@ -28,19 +29,26 @@ public class DataStore {
         return dataStore;
     }
 
-    private static ContentValues getContentValues(Questions questions){
+    private static ContentValues getContentValues(Interrogation interrogation){
         ContentValues values = new ContentValues();
-        values.put(DbSchema.Table.Columns.QUESTION, questions.getQuestion());
-        values.put(DbSchema.Table.Columns.ANSWER1, questions.getAnswer1());
-        values.put(DbSchema.Table.Columns.ANSWER2, questions.getAnswer2());
-        values.put(DbSchema.Table.Columns.ANSWER3, questions.getAnswer3());
-        values.put(DbSchema.Table.Columns.ANSWER4, questions.getAnswer4());
-        values.put(DbSchema.Table.Columns.CORRECT_ANSWER, questions.getCorrect_answer());
+        values.put(DbSchema.Table.Columns.QUESTION, interrogation.getQuestion());
+        values.put(DbSchema.Table.Columns.ANSWER1, interrogation.getAnswer(0).toString());
+        values.put(DbSchema.Table.Columns.ANSWER2, interrogation.getAnswer(1).toString());
+        values.put(DbSchema.Table.Columns.ANSWER3, interrogation.getAnswer(2).toString());
+        values.put(DbSchema.Table.Columns.ANSWER4, interrogation.getAnswer(3).toString());
+
+        Answer[] answers = interrogation.getAnswers();
+        for (int i = 0; i < answers.length; i++) {
+            if(answers[i].isCorrect()){
+                values.put(DbSchema.Table.Columns.CORRECT_ANSWER, Integer.toString(i));
+            }
+        }
+
         return values;
     }
 
-    public void addQuestion(Questions questions){
-        ContentValues values = getContentValues(questions);
+    public void addQuestion(Interrogation interrogation){
+        ContentValues values = getContentValues(interrogation);
         db.insert(DbSchema.Table.NAME, null, values);
     }
     private DbCursorWrapper queryQuestions(String whereClause, String[] whereArgs){
@@ -56,8 +64,8 @@ public class DataStore {
         return new DbCursorWrapper(cursor);
     }
 
-    public List<Questions> getQuestions(){
-        List<Questions> questions = new ArrayList<>();
+    public List<Interrogation> getQuestions(){
+        List<Interrogation> questions = new ArrayList<>();
 
         DbCursorWrapper cursor = queryQuestions(null, null);
         try{
@@ -70,8 +78,14 @@ public class DataStore {
         return questions;
     }
 
-    public void removeLecture(Questions question){
-        String title = question.getQuestion();
-        db.delete(DbSchema.Table.NAME, DbSchema.Table.Columns.QUESTION + " = ?", new String[]{title});
+    //TODO: Truncate (als wüsstest du noch was das gerade bedeutet... noob)
+    public void removeLecture(Interrogation interrogation){
+        String question = interrogation.getQuestion();
+        db.delete(DbSchema.Table.NAME, DbSchema.Table.Columns.QUESTION + " = ?", new String[]{question});
+    }
+
+    public int getAmountQuestions(){
+        Cursor c = db.rawQuery("select * from "+DbSchema.Table.NAME,null);
+        return c.getCount();
     }
 }

@@ -499,10 +499,4 @@ public class FileBrowserActivity extends Activity {
 		return retStr;
 	}// public static String formatBytes(long bytes){
 
-	// Show path of XML
-	/*public String getPath(String xml_path){
-		xml_path = path.getAbsolutePath();
-		return xml_path;
-	}*/
-
 }// END public class FileBrowserActivity extends Activity {
