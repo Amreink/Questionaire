@@ -105,7 +105,7 @@ public class SettingsActivity extends AppCompatActivity {
                 }
             });
         }
-
+        //Anzeigen der SettingsActivity und initialisieren der Buttons
         public void showSettings() {
 
             setContentView(R.layout.activity_settings);
@@ -114,8 +114,10 @@ public class SettingsActivity extends AppCompatActivity {
             Button button_import = (Button) findViewById(R.id.button_importXML);
             Button button_edit = (Button) findViewById(R.id.button_editXML);
             Button button_export = (Button) findViewById(R.id.button_exportXML);
-
             Button button_changePassword = (Button)findViewById(R.id.button_changePassword);
+
+            //XML Pfad anzeigen
+
 
             //Datenbankanbindung
             dataStore = DataStore.getInstance(getApplicationContext());
@@ -206,6 +208,7 @@ public class SettingsActivity extends AppCompatActivity {
             });
             //Bestenliste zurücksetzen
 
+            //Passwort ändern
             button_changePassword.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
