@@ -78,6 +78,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }, 2000);
 
+        } else{
+            permGranted();
         }
     }
 
@@ -93,7 +95,8 @@ public class MainActivity extends AppCompatActivity {
 
                     //Berechtigung wurde erteilt, fahre mit App fort
                     permGranted();
-
+                    //Kopiere die Dateien aus Assets in den Ordner
+                    copyAssets();
                 } else {
 
                     //ToDo: Permission erneut beantragen oder App sauber beenden
@@ -111,8 +114,7 @@ public class MainActivity extends AppCompatActivity {
     //Verhalten der Activity wenn die Berechtigungen erteilt wurden
     private void permGranted(){
 
-        //Kopiere die Dateien aus Assets in den Ordner
-        copyAssets();
+
 
         //Button initialisieren
         Button button_start = (Button) findViewById(R.id.button_start);

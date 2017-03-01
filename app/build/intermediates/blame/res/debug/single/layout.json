@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
-        "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
-    },
-    {
         "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
         "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
         "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
@@ -32,28 +32,28 @@
         "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\notification_template_big_media_narrow.xml"
     },
     {
-        "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_leaderboard.xml",
-        "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\src\\main\\res\\layout\\activity_leaderboard.xml"
+        "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
         "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
         "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_screen_content_include.xml"
     },
     {
-        "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
-        "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_list_menu_item_radio.xml"
+        "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_leaderboard.xml",
+        "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\src\\main\\res\\layout\\activity_leaderboard.xml"
     },
     {
         "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_settings.xml",
         "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\src\\main\\res\\layout\\activity_settings.xml"
     },
     {
-        "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\filebrowser_layout.xml",
-        "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\src\\main\\res\\layout\\filebrowser_layout.xml"
-    },
-    {
         "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
         "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\filebrowser_layout.xml",
+        "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\src\\main\\res\\layout\\filebrowser_layout.xml"
     },
     {
         "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
@@ -68,12 +68,12 @@
         "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
-        "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
-        "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_action_mode_bar.xml"
-    },
-    {
         "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
         "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
         "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
