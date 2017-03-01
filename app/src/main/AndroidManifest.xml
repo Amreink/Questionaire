@@ -31,9 +31,6 @@
         <activity android:name=".LeaderboardActivity"
         android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".FileBrowserActivity"
-            android:screenOrientation="portrait">
-        </activity>
     </application>
 
 </manifest>

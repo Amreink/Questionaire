@@ -1,9 +1,12 @@
 package tkapps.questionaire;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,6 +30,9 @@ public class SettingsActivity extends AppCompatActivity {
     private DataStore dataStore;
     public SharedPreferences pref;
     SharedPreferences.Editor editor;
+    private static final String TAG = "FileChooserExampleActivity";
+    private static final int REQUEST_CODE = 6384; // onActivityResult request
+    // code
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -46,24 +52,28 @@ public class SettingsActivity extends AppCompatActivity {
 
         @Override
         protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-            // TODO Auto-generated method stub
-            if (requestCode == 1) {
-                if(resultCode == this.RESULT_OK) {
-                    String newDir = data.getStringExtra(
-                            FileBrowserActivity.returnDirectoryParameter);
-                    Toast.makeText(
-                            this,
-                            "Received path from file browser:"+newDir,
-                            Toast.LENGTH_LONG
-                    ).show();
-                } else {//if(resultCode == this.RESULT_OK) {
-                    Toast.makeText(
-                            this,
-                            "Received NO result from file browser",
-                            Toast.LENGTH_LONG)
-                            .show();
-                }//END } else {//if(resultCode == this.RESULT_OK) {
-            }//if (requestCode == REQUEST_CODE_PICK_FILE_TO_SAVE_INTERNAL) {
+            switch (requestCode) {
+                case REQUEST_CODE:
+                    // If the file selection was successful
+                    if (resultCode == SettingsActivity.RESULT_OK) {
+                        if (data != null) {
+                            // Get the URI of the selected file
+                            final Uri uri = data.getData();
+                            Log.i(TAG, "Uri = " + uri.toString());
+                            try {
+                                // Get the file path from the URI
+                                final String path = tkapps.questionaire.afilechooser.utils.FileUtils.getPath(this, uri);
+                                Toast.makeText(SettingsActivity.this,
+                                        "File Selected: " + path, Toast.LENGTH_LONG).show();
+                            } catch (Exception e) {
+                                Log.e("FileSelectorTestActivity", "File select error", e);
+                            }
+                        } else
+                            Toast.makeText(this, "Datei ist leer", Toast.LENGTH_SHORT).show();
+                    }
+                    Toast.makeText(this, resultCode + " " + RESULT_OK, Toast.LENGTH_SHORT).show();
+                    break;
+            }
             super.onActivityResult(requestCode, resultCode, data);
         }
 
@@ -130,20 +140,7 @@ public class SettingsActivity extends AppCompatActivity {
             textView_path.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent fileExploreIntent = new Intent(
-                        FileBrowserActivity.INTENT_ACTION_SELECT_DIR,
-                        null,
-                        SettingsActivity.this,
-                        FileBrowserActivity.class
-                    );
-//  fileExploreIntent.putExtra(
-//      ua.com.vassiliev.androidfilebrowser.FileBrowserActivity.startDirectoryParameter,
-//      "/sdcard"
-//  );//Here you can add optional start directory parameter, and file browser will start from that directory.
-                    startActivityForResult(
-                        fileExploreIntent,
-                        1
-                    );
+                    showChooser();
                 }
             });
 
@@ -240,4 +237,16 @@ public class SettingsActivity extends AppCompatActivity {
 
         }
 
+    private void showChooser() {
+        // Use the GET_CONTENT intent from the utility class
+        Intent target = tkapps.questionaire.afilechooser.utils.FileUtils.createGetContentIntent();
+        // Create the chooser Intent
+        Intent intent = Intent.createChooser(
+                target, getString(R.string.chooser_title));
+        try {
+            startActivityForResult(intent, REQUEST_CODE);
+        } catch (ActivityNotFoundException e) {
+            // The reason for the existence of aFileChooser
+        }
+    }
 }

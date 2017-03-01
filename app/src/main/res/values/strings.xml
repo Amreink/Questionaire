@@ -20,4 +20,10 @@
     <string name="score">Punkte</string>
     <string name="question">Frage</string>
     <string name="goOn">Weiter</string>
+    <string name="empty_directory">Leerer Ordner</string>
+    <string name="storage_removed">Speicher wurde entferntet.</string>
+    <string name="choose_file">Wähle eine Datei</string>
+    <string name="error_selecting_file">Fehler beim Öffnen der Datei</string>
+    <string name="internal_storage">Internal storage</string>
+    <string name="chooser_title">Wähle XML-Datei aus</string>
 </resources>

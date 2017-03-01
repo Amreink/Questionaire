@@ -38,10 +38,6 @@
             android:name="tkapps.questionaire.LeaderboardActivity"
             android:screenOrientation="portrait" >
         </activity>
-        <activity
-            android:name="tkapps.questionaire.FileBrowserActivity"
-            android:screenOrientation="portrait" >
-        </activity>
     </application>
 
 </manifest>
