@@ -79,9 +79,9 @@ public class DataStore {
     }
 
     //TODO: Truncate (als wüsstest du noch was das gerade bedeutet... noob)
-    public void removeLecture(Interrogation interrogation){
-        String question = interrogation.getQuestion();
-        db.delete(DbSchema.Table.NAME, DbSchema.Table.Columns.QUESTION + " = ?", new String[]{question});
+    public void removeQuestions(){
+        db.execSQL("delete from "+ DbSchema.Table.NAME);
+        db.execSQL("vacuum");
     }
 
     public int getAmountQuestions(){

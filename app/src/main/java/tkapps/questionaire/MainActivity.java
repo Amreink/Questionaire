@@ -92,11 +92,11 @@ public class MainActivity extends AppCompatActivity {
                 // If request is cancelled, the result arrays are empty.
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-                    //Berechtigung wurde erteilt, fahre mit App fort
-                    permGranted();
                     //Kopiere die Dateien aus Assets in den Ordner
                     copyAssets();
+                    //Berechtigung wurde erteilt, fahre mit App fort
+                    permGranted();
+
                 } else {
 
                     //ToDo: Permission erneut beantragen oder App sauber beenden
@@ -164,15 +164,18 @@ public class MainActivity extends AppCompatActivity {
             InputStream in = null;
             OutputStream out = null;
             try {
-                in = assetManager.open(filename);
-                File outFile = new File(getExternalFilesDir(null), filename);
-                out = new FileOutputStream(outFile);
-                copyFile(in, out);
-                in.close();
-                in = null;
-                out.flush();
-                out.close();
-                out = null;
+                if (filename.equals("xml_questionnaire.xml")) {
+                    Toast.makeText(this, filename, Toast.LENGTH_SHORT).show();
+                    in = assetManager.open(filename);
+                    File outFile = new File(getExternalFilesDir(null), filename);
+                    out = new FileOutputStream(outFile);
+                    copyFile(in, out);
+                    in.close();
+                    in = null;
+                    out.flush();
+                    out.close();
+                    out = null;
+                }
             } catch(IOException e) {
                 Log.e("tag", "Failed to copy asset file: " + filename, e);
             }

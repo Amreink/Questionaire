@@ -70,21 +70,6 @@
             android:layout_centerHorizontal="true"
             android:ellipsize="none"
             android:textColor="@android:color/background_light" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/button_editXML"
-            android:text="@string/xml_path"
-            android:textSize="20sp"
-            android:textAlignment="center"
-            android:background="@android:color/background_light"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="10dp"
-            android:id="@+id/textView_path"
-            android:clickable="true" />
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"

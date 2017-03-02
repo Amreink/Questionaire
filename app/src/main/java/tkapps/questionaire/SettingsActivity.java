@@ -10,7 +10,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import org.w3c.dom.Document;
@@ -18,7 +17,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import java.io.InputStream;
+import java.io.File;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -30,7 +29,7 @@ public class SettingsActivity extends AppCompatActivity {
     private DataStore dataStore;
     public SharedPreferences pref;
     SharedPreferences.Editor editor;
-    private static final String TAG = "FileChooserExampleActivity";
+    private static final String TAG = "FileChooserActivity";
     private static final int REQUEST_CODE = 6384; // onActivityResult request
     // code
 
@@ -65,13 +64,64 @@ public class SettingsActivity extends AppCompatActivity {
                                 final String path = tkapps.questionaire.afilechooser.utils.FileUtils.getPath(this, uri);
                                 Toast.makeText(SettingsActivity.this,
                                         "File Selected: " + path, Toast.LENGTH_LONG).show();
+                                try {
+                                    //Lese die XML ein
+                                    File fXmlFile = new File(path);
+                                    DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+                                    DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+                                    Document doc = dBuilder.parse(fXmlFile);
+
+                                    //XML Normalisieren (Keine parallelen Knoten etc.)
+                                    Element element=doc.getDocumentElement();
+                                    element.normalize();
+
+                                    NodeList nList = doc.getElementsByTagName("FrageUndAntwort");
+                                    //String[] values = {"Frage", "Antwort1","Anwort2","Antwort3","Antwort4","Korrekte_Antwort"};
+
+                                    for (int i=0; i<nList.getLength(); i++) {
+
+                                        Node node = nList.item(i);
+                                        if (node.getNodeType() == Node.ELEMENT_NODE) {
+                                            Element item = (Element) node;
+
+                                            //Werte auslesen
+                                            String question = getValue("Frage", item);
+                                            String correct_answer =  getValue("Korrekte_Antwort", item);
+
+                                            String[] dbAnswers = {
+                                                    getValue("Antwort1", item),
+                                                    getValue("Antwort2", item),
+                                                    getValue("Antwort3", item),
+                                                    getValue("Antwort4", item)
+                                            };
+
+                                            Answer[] answers = new Answer[4];
+
+                                            //Jeder Antwort mitgeben, ob sie korrekt ist
+                                            for (int counter = 0; counter < 4; counter++) {
+                                                boolean correctAnswer = false;
+                                                if (Integer.parseInt(correct_answer) == counter) {
+                                                    correctAnswer = true;
+                                                }
+                                                answers[counter] = new Answer(dbAnswers[counter], correctAnswer);
+                                            }
+
+                                            Interrogation interrogation = new Interrogation(
+                                                    question, answers[0], answers[1], answers[2], answers[3]);
+                                            //Datensatz abspeichern
+                                            dataStore.addQuestion(interrogation);
+                                        }
+                                    }
+                                    Toast.makeText(SettingsActivity.this, "Xml wurde erfolgreich importiert.", Toast.LENGTH_SHORT).show();
+
+                                } catch (Exception e) {e.printStackTrace();}
+
                             } catch (Exception e) {
-                                Log.e("FileSelectorTestActivity", "File select error", e);
+                                Log.e("FileSelectorActivity", "File select error", e);
                             }
                         } else
                             Toast.makeText(this, "Datei ist leer", Toast.LENGTH_SHORT).show();
                     }
-                    Toast.makeText(this, resultCode + " " + RESULT_OK, Toast.LENGTH_SHORT).show();
                     break;
             }
             super.onActivityResult(requestCode, resultCode, data);
@@ -119,94 +169,31 @@ public class SettingsActivity extends AppCompatActivity {
                 }
             });
         }
+
         //Anzeigen der SettingsActivity und initialisieren der Buttons
+        //Dies sind die Einstellungen
         public void showSettings() {
 
             setContentView(R.layout.activity_settings);
 
-            TextView textView_path = (TextView) findViewById(R.id.textView_path);
             Button button_import = (Button) findViewById(R.id.button_importXML);
             Button button_edit = (Button) findViewById(R.id.button_editXML);
             Button button_export = (Button) findViewById(R.id.button_exportXML);
             Button button_changePassword = (Button)findViewById(R.id.button_changePassword);
 
-            //XML Pfad anzeigen
-
-
             //Datenbankanbindung
             dataStore = DataStore.getInstance(getApplicationContext());
-
-            //ImportPfad auswählen
-            textView_path.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    showChooser();
-                }
-            });
-
-
-            //Xml einspielen
 
             //Button button_import soll eine XML importieren können
             button_import.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                try {
-                    InputStream is = getAssets().open("xml_questionnaire.xml");
-
-                    DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-                    DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-                    Document doc = dBuilder.parse(is);
-
-                    Element element=doc.getDocumentElement();
-                    element.normalize();
-
-                    NodeList nList = doc.getElementsByTagName("FrageUndAntwort");
-                    //String[] values = {"Frage", "Antwort1","Anwort2","Antwort3","Antwort4","Korrekte_Antwort"};
-
-                    for (int i=0; i<nList.getLength(); i++) {
-
-                        Node node = nList.item(i);
-                        if (node.getNodeType() == Node.ELEMENT_NODE) {
-                            Element item = (Element) node;
-
-                            String question = getValue("Frage", item);
-                            String correct_answer =  getValue("Korrekte_Antwort", item);
-
-                            String[] dbAnswers = {
-                                    getValue("Antwort1", item),
-                                    getValue("Antwort2", item),
-                                    getValue("Antwort3", item),
-                                    getValue("Antwort4", item)
-                            };
-
-                            Answer[] answers = new Answer[4];
-
-                            for (int counter = 0; counter < 4; counter++) {
-                                boolean correctAnswer = false;
-                                if (Integer.parseInt(correct_answer) == counter) {
-                                    correctAnswer = true;
-                                }
-                                answers[counter] = new Answer(dbAnswers[counter], correctAnswer);
-                            }
-
-                            Interrogation interrogation = new Interrogation(
-                                    question, answers[0], answers[1], answers[2], answers[3]);
-                            dataStore.addQuestion(interrogation);
-                        }
-                    }
-
-                } catch (Exception e) {e.printStackTrace();}
-
+                    //Datenbank leeren
+                    //Nötig, damit eine XML nicht mehrmals eingelesen wird
+                    dataStore.removeQuestions();
+                    //Dateibrowser öffnen
+                    showChooser();
                 }
-
-                private String getValue(String tag, Element element) {
-                    NodeList nodeList = element.getElementsByTagName(tag).item(0).getChildNodes();
-                    Node node = nodeList.item(0);
-                    return node.getNodeValue();
-                }
-
             });
 
             //Button button_edit soll Fragen edtieren können
@@ -234,9 +221,9 @@ public class SettingsActivity extends AppCompatActivity {
                 }
             });
 
-
         }
 
+    //Zeigt den Dateibrowser an
     private void showChooser() {
         // Use the GET_CONTENT intent from the utility class
         Intent target = tkapps.questionaire.afilechooser.utils.FileUtils.createGetContentIntent();
@@ -249,4 +236,12 @@ public class SettingsActivity extends AppCompatActivity {
             // The reason for the existence of aFileChooser
         }
     }
+
+    //Methode um die Knoten aus der XML auszulesen
+    private String getValue(String tag, Element element) {
+        NodeList nodeList = element.getElementsByTagName(tag).item(0).getChildNodes();
+        Node node = nodeList.item(0);
+        return node.getNodeValue();
+    }
 }
+
