@@ -28,4 +28,5 @@
     <string name="chooser_title">Wähle XML-Datei aus</string>
     <string name="logo">Firmenzeichen</string>
     <string name="change_logo">Firmenzeichen ändern</string>
+    <string name="result">Ergebnis:</string>
 </resources>
