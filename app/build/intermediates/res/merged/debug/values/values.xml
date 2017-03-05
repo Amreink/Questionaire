@@ -329,6 +329,7 @@
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="app_name">Questionaire</string>
+    <string name="change_logo">Firmenzeichen ändern</string>
     <string name="change_password">Passwort ändern</string>
     <string name="choose_file">Wähle eine Datei</string>
     <string name="chooser_title">Wähle XML-Datei aus</string>
@@ -340,6 +341,7 @@
     <string name="hint">...</string>
     <string name="internal_storage">Internal storage</string>
     <string name="leaderboard">Bestenliste</string>
+    <string name="logo">Firmenzeichen</string>
     <string name="logo_description">Firmenlogo</string>
     <string name="password">Passwort</string>
     <string name="question">Frage</string>

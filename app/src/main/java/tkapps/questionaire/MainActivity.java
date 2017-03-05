@@ -20,16 +20,25 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+import tkapps.questionaire.data.DataStore;
+
 public class MainActivity extends AppCompatActivity {
 
     public static final int MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE = 0;
     public static boolean toastShown;
+
+    //Feststellen ob Fragenkatalog vorhanden ist
+    private DataStore dataStore;
+    public static int amountQuestions = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Die Anzahl der Fragen im aktuellen Fragenkatalog festsellen
+        dataStore = DataStore.getInstance(getApplicationContext());
+        amountQuestions = dataStore.getAmountQuestions();
 
         //Beantragen der Berechtigung
         if (ContextCompat.checkSelfPermission(this,
@@ -121,12 +130,20 @@ public class MainActivity extends AppCompatActivity {
         Button button_settings = (Button) findViewById(R.id.button_settings);
         Button button_leaderboard = (Button) findViewById(R.id.button_leaderboard);
 
-        //Button button_start ruft die QuizActivity auf
+        //Button button_start ruft die QuizActivity auf wenn ein Fragenkatalog vorhanden ist
         button_start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, QuizActivity.class);
-                startActivity(intent);
+                //Die Anzahl der Fragen im aktuellen Fragenkatalog festsellen
+                dataStore = DataStore.getInstance(getApplicationContext());
+                amountQuestions = dataStore.getAmountQuestions();
+                //Beim klick auf Starten prüfen ob Fragenkatalog vorhanden ist
+                if (amountQuestions == 0) {
+                    Toast.makeText(MainActivity.this,"Kein Fragenkatalog vorhanden",Toast.LENGTH_LONG).show();
+                } else {
+                    Intent intent = new Intent(MainActivity.this, QuizActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 

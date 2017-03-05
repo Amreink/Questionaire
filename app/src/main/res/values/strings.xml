@@ -26,4 +26,6 @@
     <string name="error_selecting_file">Fehler beim Öffnen der Datei</string>
     <string name="internal_storage">Internal storage</string>
     <string name="chooser_title">Wähle XML-Datei aus</string>
+    <string name="logo">Firmenzeichen</string>
+    <string name="change_logo">Firmenzeichen ändern</string>
 </resources>

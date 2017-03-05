@@ -11,7 +11,7 @@
         android:id="@+id/relativeLayoutQuestion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_blue_dark"
+        android:background="@android:color/background_light"
         android:paddingBottom="10sp"
         android:paddingLeft="5sp"
         android:paddingRight="5sp">
@@ -22,19 +22,21 @@
             android:layout_height="wrap_content"
             android:text="0"
             android:textSize="30sp"
-            android:textColor="@android:color/background_light"
+            android:textColor="@android:color/holo_blue_dark"
             android:textAlignment="center"
             android:padding="05sp"
-            android:layout_margin="10sp"/>
+            android:layout_margin="10sp"
+            android:layout_alignParentLeft="true"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/textView_scoreCounter"
+            android:layout_below="@+id/textView_scoreCounter"
             android:text="@string/score"
             android:textSize="20sp"
-            android:textColor="@android:color/background_light"
-            android:layout_margin="10sp"/>
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_margin="10sp"
+            android:layout_alignParentLeft="true"/>
 
         <TextView
             android:id="@+id/textView_questionCounter"
@@ -43,7 +45,7 @@
             android:text="0"
             android:textSize="30sp"
             android:textAlignment="center"
-            android:textColor="@android:color/background_light"
+            android:textColor="@android:color/holo_blue_dark"
             android:padding="5sp"
             android:layout_margin="10sp"
             android:layout_alignParentRight="true"/>
@@ -51,11 +53,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toLeftOf="@+id/textView_questionCounter"
+            android:layout_below="@+id/textView_questionCounter"
             android:text="@string/question"
             android:textSize="20sp"
-            android:textColor="@android:color/background_light"
-            android:layout_margin="10sp" />
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_margin="10sp"
+            android:layout_alignParentRight="true"/>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -76,8 +79,20 @@
             android:id="@+id/textView_question"
             android:textSize="30sp"
             android:text="Hier steht spaeter die Frage"
+            android:textColor="@android:color/black"
             android:gravity="center"
             android:layout_below="@+id/imageView_Quiz"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/textView_questionaire"
+            android:textSize="15sp"
+            android:text="Questionaire"
+            android:textColor="@android:color/holo_blue_dark"
+            android:gravity="center"
+            android:layout_below="@+id/textView_question"/>
     </RelativeLayout>
 
     <ListView
@@ -85,6 +100,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/listView_answer"
         android:layout_below="@+id/relativeLayoutQuestion"
-        android:layout_margin="10sp" />
+        android:padding="10sp"
+        android:background="@android:color/holo_blue_dark" />
 
 </RelativeLayout>
