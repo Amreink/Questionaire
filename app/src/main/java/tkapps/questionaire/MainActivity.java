@@ -181,18 +181,17 @@ public class MainActivity extends AppCompatActivity {
             InputStream in = null;
             OutputStream out = null;
             try {
-                if (filename.equals("xml_questionnaire.xml")) {
-                    Toast.makeText(this, filename, Toast.LENGTH_SHORT).show();
-                    in = assetManager.open(filename);
-                    File outFile = new File(getExternalFilesDir(null), filename);
-                    out = new FileOutputStream(outFile);
-                    copyFile(in, out);
-                    in.close();
-                    in = null;
-                    out.flush();
-                    out.close();
-                    out = null;
-                }
+
+                in = assetManager.open(filename);
+                File outFile = new File(getExternalFilesDir(null), filename);
+                out = new FileOutputStream(outFile);
+                copyFile(in, out);
+                in.close();
+                in = null;
+                out.flush();
+                out.close();
+                out = null;
+
             } catch(IOException e) {
                 Log.e("tag", "Failed to copy asset file: " + filename, e);
             }
