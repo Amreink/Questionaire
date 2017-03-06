@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Timo-\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldltr-v21\\values-ldltr-v21.xml",
+        "outputFile": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldltr-v21\\values-ldltr-v21.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 163
                 },
                 "from": {
-                    "file": "C:\\Users\\Timo-\\.android\\build-cache\\66632550c2c91b1255ffb0e09ec96144868ac5c8\\output\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
+                    "file": "C:\\Users\\Timo\\.android\\build-cache\\a1e60b264a9d6beae51ed345cc24770ea8ed69f9\\output\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

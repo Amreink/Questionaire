@@ -1820,14 +1820,14 @@ containing a value of this type.
         public static final int button_changeLogo=0x7f0b007a;
         public static final int button_changePassword=0x7f0b0077;
         public static final int button_confirmPassword=0x7f0b006e;
-        public static final int button_editXML=0x7f0b0072;
+        public static final int button_editXML=0x7f0b0074;
         public static final int button_enterPassword=0x7f0b0063;
         public static final int button_exportXML=0x7f0b0075;
         public static final int button_goOn=0x7f0b0056;
-        public static final int button_importXML=0x7f0b0074;
+        public static final int button_importXML=0x7f0b0072;
         public static final int button_leaderboard=0x7f0b005f;
         public static final int button_settings=0x7f0b005e;
-        public static final int button_start=0x7f0b005c;
+        public static final int button_start=0x7f0b005d;
         public static final int cancel_action=0x7f0b0081;
         public static final int checkbox=0x7f0b003c;
         public static final int chronometer=0x7f0b0087;
@@ -1851,7 +1851,7 @@ containing a value of this type.
         public static final int ifRoom=0x7f0b001f;
         public static final int image=0x7f0b0029;
         public static final int imageView_Quiz=0x7f0b0068;
-        public static final int imageView_mainCompany=0x7f0b005d;
+        public static final int imageView_mainCompany=0x7f0b005c;
         public static final int imageView_mainQuestionaire=0x7f0b005b;
         public static final int info=0x7f0b008b;
         public static final int line1=0x7f0b0085;

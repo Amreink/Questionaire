@@ -23,6 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10sp"
+        android:padding="10sp"
         android:clickable="false"
         android:background="@android:color/holo_blue_dark"
         android:id="@+id/relativeLayoutXML"
@@ -34,11 +35,9 @@
             android:text="@string/xml_import"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/button_editXML"
-            android:layout_toLeftOf="@+id/textView_XML"
-            android:layout_toStartOf="@+id/textView_XML"
             android:id="@+id/button_importXML"
-            android:layout_weight="1" />
+            android:layout_below="@+id/textView_XML"
+            android:layout_toLeftOf="@+id/button_editXML" />
 
         <Button
             android:text="@string/xml_edit"
@@ -46,18 +45,15 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView_XML"
             android:layout_centerHorizontal="true"
-            android:id="@+id/button_editXML"
-            android:layout_weight="1" />
+            android:id="@+id/button_editXML" />
 
         <Button
             android:text="@string/xml_export"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView_XML"
-            android:layout_toRightOf="@+id/textView_XML"
-            android:layout_toEndOf="@+id/textView_XML"
-            android:id="@+id/button_exportXML"
-            android:layout_weight="1" />
+            android:layout_toRightOf="@+id/button_editXML"
+            android:id="@+id/button_exportXML" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -65,7 +61,6 @@
             android:id="@+id/textView_XML"
             android:text="@string/xml"
             android:textSize="30sp"
-            android:layout_weight="1"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:ellipsize="none"
@@ -77,6 +72,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10sp"
+        android:padding="10sp"
         android:clickable="false"
         android:background="@android:color/holo_blue_dark"
         android:id="@+id/relativeLayoutPassword"
@@ -97,16 +93,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView_password"
-            android:text="@string/change_password"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="4dp"/>
+            android:text="@string/change_password" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10sp"
+        android:padding="10sp"
         android:clickable="false"
         android:background="@android:color/holo_blue_dark"
         android:id="@+id/relativeLayoutLogo"
@@ -127,10 +121,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView_logo"
-            android:text="@string/change_logo"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="4dp"/>
+            android:text="@string/change_logo" />
     </RelativeLayout>
 
 </RelativeLayout>

@@ -5,61 +5,61 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:padding="16sp"
     tools:context="tkapps.questionaire.MainActivity">
 
-
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/questionaire"
-        android:layout_alignParentStart="true"
         android:id="@+id/imageView_mainQuestionaire"
-        android:contentDescription="@string/questionaire" />
-
-    <Button
-        android:text="@string/start"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25sp"
-        android:id="@+id/button_start"
-        android:textSize="20sp"
-        android:padding="15sp"
-        android:layout_below="@+id/imageView_mainCompany" />
-
-    <Button
-        android:text="@string/settings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/button_settings"
-        android:textSize="20sp"
-        android:layout_below="@+id/button_start"
-        android:layout_marginTop="25dp"
-        android:padding="15sp"/>
-
-    <Button
-        android:text="@string/leaderboard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/button_leaderboard"
-        android:layout_marginTop="25dp"
-        android:padding="15sp"
-        android:textSize="20sp"
-        android:layout_below="@+id/button_settings" />
+        android:layout_alignParentStart="true"
+        android:contentDescription="@string/questionaire"
+        app:srcCompat="@drawable/questionaire" />
 
     <ImageView
+        android:id="@+id/imageView_mainCompany"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/questionaire_logo"
-        android:id="@+id/imageView_mainCompany"
-        android:contentDescription="@string/logo_description"
         android:layout_below="@id/imageView_mainQuestionaire"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:padding="20sp"/>
+        android:contentDescription="@string/logo_description"
+        android:padding="5sp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/questionaire_logo" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
 
+        <Button
+            android:id="@+id/button_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25sp"
+            android:padding="15sp"
+            android:text="@string/start"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/button_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_start"
+            android:layout_marginTop="20dp"
+            android:padding="15sp"
+            android:text="@string/settings"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/button_leaderboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_settings"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:padding="15sp"
+            android:text="@string/leaderboard"
+            android:textSize="20sp" />
+    </RelativeLayout>
 </RelativeLayout>
