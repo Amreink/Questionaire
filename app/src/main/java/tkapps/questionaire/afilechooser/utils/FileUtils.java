@@ -524,7 +524,8 @@ public class FileUtils {
         // Implicitly allow the user to select a particular kind of data
         final Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
         // The MIME data type filter
-        intent.setType("*/*");
+        //text/xml oder application/xml (MIME-Type der Datei)
+        intent.setType("text/xml");
         // Only return URIs that can be opened with ContentResolver
         intent.addCategory(Intent.CATEGORY_OPENABLE);
         return intent;
