@@ -1,12 +1,14 @@
 package tkapps.questionaire;
 
 import android.content.Intent;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -47,7 +49,7 @@ public class QuizActivity extends AppCompatActivity {
             Answer[] antworten = fragestellung.getAnswers();
 
             //Arrayadapter für die Listview erstellt
-            //Für die einzelnen Elemente wird das Layout aus der answer_itemxml gezogen
+            //Für die einzelnen Elemente wird das Layout aus der answer_item.xml gezogen
             ArrayAdapter<Answer> answerlistAdapter = new ArrayAdapter<>(
                     this,
                     R.layout.answer_item,
@@ -61,6 +63,19 @@ public class QuizActivity extends AppCompatActivity {
             textView_questionCounter.setText(Integer.toString(questionCounter + 1) + " / " + amountQuestions);
             textView_scoreCounter.setText(Integer.toString(scoreCounter));
 
+            Button button_Skip = (Button) findViewById(R.id.button_skip);
+            button_Skip.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    questionCounter++;
+                    scoreCounter--;
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
+                    Toast.makeText(QuizActivity.this, "Frage übersprungen.", Toast.LENGTH_SHORT).show();
+                }
+            });
+
             list_answer.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -69,7 +84,9 @@ public class QuizActivity extends AppCompatActivity {
                     String meldung = "Antwort ist falsch!";
                     if (answer.isCorrect()) {
                         meldung = "Antwort ist richtig!";
-                        scoreCounter += 5;
+                        scoreCounter += 3;
+                    } else {
+                        scoreCounter -= 3;
                     }
 
                     Toast.makeText(QuizActivity.this, meldung, Toast.LENGTH_SHORT).show();

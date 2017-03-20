@@ -1,10 +1,6 @@
 [
     {
-        "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v23\\abc_control_background_material.xml",
-        "source": "C:\\Users\\Karsten\\.android\\build-cache\\29ca6c23b1620245d2cf9be747f7e2573fab4133\\output\\res\\drawable-v23\\abc_control_background_material.xml"
-    },
-    {
         "merged": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v23\\abc_control_background_material.xml",
-        "source": "C:\\Users\\Timo\\.android\\build-cache\\a1e60b264a9d6beae51ed345cc24770ea8ed69f9\\output\\res\\drawable-v23\\abc_control_background_material.xml"
+        "source": "C:\\Users\\Timo\\.android\\build-cache\\a8263eac2ffd8a76aea88c40076753c3dd3ec089\\output\\res\\drawable-v23\\abc_control_background_material.xml"
     }
 ]

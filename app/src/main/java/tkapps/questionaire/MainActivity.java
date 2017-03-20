@@ -128,7 +128,9 @@ public class MainActivity extends AppCompatActivity {
         //Button initialisieren
         Button button_start = (Button) findViewById(R.id.button_start);
         Button button_settings = (Button) findViewById(R.id.button_settings);
+        Button button_help = (Button) findViewById(R.id.button_help);
         Button button_leaderboard = (Button) findViewById(R.id.button_leaderboard);
+
 
         //Button button_start ruft die QuizActivity auf wenn ein Fragenkatalog vorhanden ist
         button_start.setOnClickListener(new View.OnClickListener() {
@@ -153,6 +155,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        //Button button_help ruft die Hilfe auf
+        button_help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                exitHelp();
             }
         });
 
@@ -204,6 +214,24 @@ public class MainActivity extends AppCompatActivity {
         while((read = in.read(buffer)) != -1){
             out.write(buffer, 0, read);
         }
+    }
+    //Beim klick auf Hilfe landet man hier - Logik für Hilfsansicht
+    public void exitHelp(){
+        setContentView(R.layout.activity_help);
+
+        Button button_exitHelp = (Button) findViewById(R.id.button_exitHelp);
+        button_exitHelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setContentView(R.layout.activity_main);
+                Intent intent = getIntent();
+                overridePendingTransition(0,0);
+                finish();
+                overridePendingTransition(0,0);
+                startActivity(intent);
+                overridePendingTransition(0,0);
+            }
+        });
     }
 
 }

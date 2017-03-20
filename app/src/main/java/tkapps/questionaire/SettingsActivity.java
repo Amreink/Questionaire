@@ -177,7 +177,7 @@ public class SettingsActivity extends AppCompatActivity {
             setContentView(R.layout.activity_settings);
 
             Button button_import = (Button) findViewById(R.id.button_importXML);
-            Button button_edit = (Button) findViewById(R.id.button_editXML);
+            Button button_help = (Button) findViewById(R.id.button_helpXML);
             Button button_export = (Button) findViewById(R.id.button_exportXML);
             Button button_changePassword = (Button)findViewById(R.id.button_changePassword);
 
@@ -196,8 +196,8 @@ public class SettingsActivity extends AppCompatActivity {
                 }
             });
 
-            //Button button_edit soll Fragen edtieren können
-            button_edit.setOnClickListener(new View.OnClickListener() {
+            //Button button_help soll Hilfe für die Erstellung eigener Fragenkataloge anzeigen
+            button_help.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     //Tu Dinge!

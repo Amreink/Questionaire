@@ -5,9 +5,9 @@
     <string name="start">Starten</string>
     <string name="settings">Einstellungen</string>
     <string name="leaderboard">Bestenliste</string>
-    <string name="xml">XML-Import</string>
+    <string name="xml">Fragenkatalog</string>
     <string name="xml_import">Import</string>
-    <string name="xml_edit">Bearbeiten</string>
+    <string name="xml_help">Hilfe</string>
     <string name="xml_export">Export</string>
     <string name="xml_path">Dateipfad</string>
     <string name="enter_password">Passworteingabe</string>
@@ -29,4 +29,17 @@
     <string name="logo">Firmenzeichen</string>
     <string name="change_logo">Firmenzeichen ändern</string>
     <string name="result">Ergebnis:</string>
+    <string name="skip">Überspringen</string>
+    <string name="help">Hilfe</string>
+
+    <string name="help_textHelp">Beim ersten Aufrufen der Einstellungen müssen Sie ein Passwort
+        festlegen. Vergessen Sie das Passwort nicht, es schützt Ihre Einstellungen vor unbefugten Änderungen.\n\n
+        Um das Quiz starten zu können müssen Sie zunächst in den Einstellungen einen Fragenkatalog importieren.
+        Genauere Anweisungen finden Sie in den Einstellungen unter Fragenkatalog.
+    </string>
+
+    <string name="help_textXML">Hier Schema für den Aufbau eines eigenen Fragenkataloges hinterlegen.
+    </string>
+
+    <string name="ok">Alles klar!</string>
 </resources>

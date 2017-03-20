@@ -15,13 +15,16 @@ public class DbCursorWrapper extends CursorWrapper {
         super(cursor);
     }
 
+    //Lese Fragespalte aus
     public Interrogation getQuestion(){
         String question = getString(
                 getColumnIndex(DbSchema.Table.Columns.QUESTION));
 
+        //Lese korrekte Antwort aus
         String correct_answer = getString(
                 getColumnIndex(DbSchema.Table.Columns.CORRECT_ANSWER));
 
+        //Lese Antworten in Array aus
         String[] dbAnswers = {
                 getString(getColumnIndex(DbSchema.Table.Columns.ANSWER1)),
                 getString(getColumnIndex(DbSchema.Table.Columns.ANSWER2)),
@@ -29,6 +32,7 @@ public class DbCursorWrapper extends CursorWrapper {
                 getString(getColumnIndex(DbSchema.Table.Columns.ANSWER4))
         };
 
+        //Gebe jeder Antwort mit, ob diese richtig oder falsch ist
         Answer[] answers = new Answer[4];
 
         for (int i = 0; i < 4; i++) {

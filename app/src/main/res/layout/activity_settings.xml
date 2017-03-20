@@ -22,14 +22,13 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10sp"
         android:padding="10sp"
         android:clickable="false"
         android:background="@android:color/holo_blue_dark"
         android:id="@+id/relativeLayoutXML"
+        android:layout_marginRight="10sp"
         android:layout_below="@+id/textView_settings"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignStart="@+id/relativeLayoutPassword">
 
         <Button
             android:text="@string/xml_import"
@@ -37,23 +36,25 @@
             android:layout_height="wrap_content"
             android:id="@+id/button_importXML"
             android:layout_below="@+id/textView_XML"
-            android:layout_toLeftOf="@+id/button_editXML" />
+            android:layout_toLeftOf="@+id/button_exportXML"
+            android:layout_marginRight="30sp"/>
 
         <Button
-            android:text="@string/xml_edit"
+            android:text="@string/xml_help"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView_XML"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/button_editXML" />
+            android:layout_toRightOf="@+id/button_exportXML"
+            android:id="@+id/button_helpXML"
+            android:layout_marginLeft="30sp"/>
 
         <Button
             android:text="@string/xml_export"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView_XML"
-            android:layout_toRightOf="@+id/button_editXML"
-            android:id="@+id/button_exportXML" />
+            android:id="@+id/button_exportXML"
+            android:layout_centerHorizontal="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -88,6 +89,7 @@
             android:textAlignment="center"
             android:textColor="@android:color/background_light"
             android:textSize="30sp" />
+
         <Button
             android:id="@+id/button_changePassword"
             android:layout_width="match_parent"
@@ -116,6 +118,7 @@
             android:textAlignment="center"
             android:textColor="@android:color/background_light"
             android:textSize="30sp" />
+
         <Button
             android:id="@+id/button_changeLogo"
             android:layout_width="match_parent"

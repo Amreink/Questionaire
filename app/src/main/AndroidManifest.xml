@@ -23,14 +23,13 @@
         </activity>
         <activity
             android:name=".QuizActivity"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".SettingsActivity"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".LeaderboardActivity"
-        android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".LeaderboardActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

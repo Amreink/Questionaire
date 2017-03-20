@@ -18,6 +18,7 @@ public class DbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        //Fragekatalogtabelle erstellen
         db.execSQL("CREATE TABLE " + DbSchema.Table.NAME + " (" +
         "_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
         DbSchema.Table.Columns.QUESTION + " TEXT NOT NULL, "+
@@ -26,6 +27,14 @@ public class DbHelper extends SQLiteOpenHelper {
         DbSchema.Table.Columns.ANSWER3 + " TEXT NOT NULL, "+
         DbSchema.Table.Columns.ANSWER4 + " TEXT NOT NULL, "+
         DbSchema.Table.Columns.CORRECT_ANSWER + " TEXT NOT NULL)");
+
+        //Scoretabelle erstellen
+        db.execSQL("CREATE TABLE " + DbSchema.ScoreTable.SCORENAME + " (" +
+        "_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+        DbSchema.ScoreTable.Columns.NAME + " TEXT NOT NULL, "+
+        DbSchema.ScoreTable.Columns.EMAIL + " TEXT NOT NULL, "+
+        DbSchema.ScoreTable.Columns.SCORE + " TEXT NOT NULL, "+
+        DbSchema.ScoreTable.Columns.AGB + " TEXT NOT NULL)");
     }
 
     @Override

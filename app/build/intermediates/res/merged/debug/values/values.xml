@@ -338,11 +338,20 @@
     <string name="enter_password">Passworteingabe</string>
     <string name="error_selecting_file">Fehler beim Öffnen der Datei</string>
     <string name="goOn">Weiter</string>
+    <string name="help">Hilfe</string>
+    <string name="help_textHelp">Beim ersten Aufrufen der Einstellungen müssen Sie ein Passwort
+        festlegen. Vergessen Sie das Passwort nicht, es schützt Ihre Einstellungen vor unbefugten Änderungen.\n\n
+        Um das Quiz starten zu können müssen Sie zunächst in den Einstellungen einen Fragenkatalog importieren.
+        Genauere Anweisungen finden Sie in den Einstellungen unter Fragenkatalog.
+    </string>
+    <string name="help_textXML">Hier Schema für den Aufbau eines eigenen Fragenkataloges hinterlegen.
+    </string>
     <string name="hint">...</string>
     <string name="internal_storage">Internal storage</string>
     <string name="leaderboard">Bestenliste</string>
     <string name="logo">Firmenzeichen</string>
     <string name="logo_description">Firmenlogo</string>
+    <string name="ok">Alles klar!</string>
     <string name="password">Passwort</string>
     <string name="question">Frage</string>
     <string name="questionaire">Questionaire</string>
@@ -352,12 +361,13 @@
     <string name="settings">Einstellungen</string>
     <string name="setup_password">Passwort festlegen</string>
     <string name="sign_in">Anmelden</string>
+    <string name="skip">Überspringen</string>
     <string name="start">Starten</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="storage_removed">Speicher wurde entferntet.</string>
-    <string name="xml">XML-Import</string>
-    <string name="xml_edit">Bearbeiten</string>
+    <string name="xml">Fragenkatalog</string>
     <string name="xml_export">Export</string>
+    <string name="xml_help">Hilfe</string>
     <string name="xml_import">Import</string>
     <string name="xml_path">Dateipfad</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
