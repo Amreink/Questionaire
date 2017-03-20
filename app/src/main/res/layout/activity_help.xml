@@ -1,42 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_dark"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/holo_blue_dark"
     tools:context="tkapps.questionaire.MainActivity">
+
 
     <TextView
         android:id="@+id/textView_helpTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/background_light"
+        android:padding="10dp"
         android:text="@string/help"
         android:textAlignment="center"
-        android:textSize="40sp"
-        android:layout_marginBottom="10sp"
         android:textColor="@android:color/holo_blue_dark"
-        android:background="@android:color/background_light"
-        android:padding="10sp"/>
+        android:textSize="40sp" />
 
-    <TextView
-        android:id="@+id/textView_helpTxt"
-        android:layout_width="match_parent"
+    <ScrollView
+        android:id="@+id/scrollView_help"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/help_textHelp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
         android:layout_below="@+id/textView_helpTitle"
-        android:layout_centerInParent="true"
-        android:textSize="20sp"
-        android:padding="10sp"
-        android:textColor="@android:color/background_light"
-        android:textAlignment="center" />
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/textView_help"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textSize="20sp" />
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageView_help"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button_exitHelp"
+        android:layout_below="@+id/scrollView_help"
+        android:padding="10dp" />
 
     <Button
         android:id="@+id/button_exitHelp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/ok"
-        android:padding="10sp"
-        android:layout_margin="10sp"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:text="@string/ok" />
 
 </RelativeLayout>

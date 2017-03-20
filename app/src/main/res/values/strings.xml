@@ -8,7 +8,7 @@
     <string name="xml">Fragenkatalog</string>
     <string name="xml_import">Import</string>
     <string name="xml_help">Hilfe</string>
-    <string name="xml_export">Export</string>
+    <string name="export">Export</string>
     <string name="xml_path">Dateipfad</string>
     <string name="enter_password">Passworteingabe</string>
     <string name="setup_password">Passwort festlegen</string>
@@ -31,15 +31,17 @@
     <string name="result">Ergebnis:</string>
     <string name="skip">Überspringen</string>
     <string name="help">Hilfe</string>
+    <string name="reset">Zurücksetzen</string>
 
-    <string name="help_textHelp">Beim ersten Aufrufen der Einstellungen müssen Sie ein Passwort
+    <string name="help_main">Beim ersten Aufrufen der "Einstellungen" müssen Sie ein Passwort
         festlegen. Vergessen Sie das Passwort nicht, es schützt Ihre Einstellungen vor unbefugten Änderungen.\n\n
-        Um das Quiz starten zu können müssen Sie zunächst in den Einstellungen einen Fragenkatalog importieren.
-        Genauere Anweisungen finden Sie in den Einstellungen unter Fragenkatalog.
+        Um das Quiz starten zu können müssen Sie zunächst in den "Einstellungen" einen Fragenkatalog importieren.
+        Genauere Anweisungen finden Sie in den "Einstellungen" unter "Fragenkatalog".
     </string>
 
-    <string name="help_textXML">Hier Schema für den Aufbau eines eigenen Fragenkataloges hinterlegen.
-    </string>
+    <string name="help_xml">Um einen Fragenkatalog zu importieren tippen Sie bitte auf "Import". Suchen
+        Sie anschließend mit dem Datei-Browser die gewünschte XML-Datei.\n\n
+        Fragenkatalog-Schema:</string>
 
     <string name="ok">Alles klar!</string>
 </resources>
