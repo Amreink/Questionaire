@@ -33,8 +33,8 @@ public class DbHelper extends SQLiteOpenHelper {
         "_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
         DbSchema.ScoreTable.Columns.NAME + " TEXT NOT NULL, "+
         DbSchema.ScoreTable.Columns.EMAIL + " TEXT NOT NULL, "+
-        DbSchema.ScoreTable.Columns.SCORE + " TEXT NOT NULL, "+
-        DbSchema.ScoreTable.Columns.AGB + " TEXT NOT NULL)");
+        DbSchema.ScoreTable.Columns.SCORE + " INT NOT NULL, "+
+        DbSchema.ScoreTable.Columns.AGB + " INT NOT NULL)");
     }
 
     @Override

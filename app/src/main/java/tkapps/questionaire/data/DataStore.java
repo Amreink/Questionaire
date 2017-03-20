@@ -128,21 +128,21 @@ public class DataStore {
 
     //Cursor liest Tabelle Zeile für Zeile aus
     public List<ScoreListEntry> getScoreListEntry(){
-        List<ScoreListEntry> questions = new ArrayList<>();
+        List<ScoreListEntry> scorelist = new ArrayList<>();
 
-        DbCursorWrapper cursor = queryQuestions(null, null);
+        DbCursorWrapper cursor = queryScore(null, null);
         try{
             cursor.moveToFirst();
             while(!cursor.isAfterLast()) {
-                questions.add(cursor.getQuestion());
+                scorelist.add(cursor.getScore());
                 cursor.moveToNext();
             }
         } finally {cursor.close(); }
-        return questions;
+        return scorelist;
     }
 
-    //Entfernt aktuelle Bestenliste
     public void removeLeaderboard() {
+    //Entfernt aktuelle Bestenliste
         db.execSQL("delete from " + DbSchema.ScoreTable.SCORENAME);
         db.execSQL("vacuum");
     }

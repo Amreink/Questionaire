@@ -5,6 +5,7 @@ import android.database.CursorWrapper;
 
 import tkapps.questionaire.Answer;
 import tkapps.questionaire.Interrogation;
+import tkapps.questionaire.ScoreListEntry;
 
 /**
  * Created by Karsten on 21.02.2017.
@@ -44,5 +45,13 @@ public class DbCursorWrapper extends CursorWrapper {
         }
 
         return new Interrogation(question, answers[0], answers[1], answers[2], answers[3]);
+    }
+
+    public ScoreListEntry getScore(){
+        String name = getString(getColumnIndex(DbSchema.ScoreTable.Columns.NAME));
+        String email = getString(getColumnIndex(DbSchema.ScoreTable.Columns.EMAIL));
+        int score = getColumnIndex(DbSchema.ScoreTable.Columns.SCORE);
+        Boolean agb = getColumnIndex(DbSchema.ScoreTable.Columns.AGB) > 0;
+        return new ScoreListEntry(name, email, score, agb);
     }
 }
