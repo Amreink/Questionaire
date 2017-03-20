@@ -41,11 +41,11 @@
         <Korrekte_Antwort>0</Korrekte_Antwort>
     </FrageUndAntwort>
     <FrageUndAntwort>
-        <Frage>Diese Frage dient einzig und allein dazu, zu testen wie lange so eine Frage denn �berhaupt sein darf. W�re schon witzig wenn ein Anwender mal eine etwas l�ngere Frage stellen w�rde und diese nicht anst�ndig angezeigt werden k�nnte. One and One makes...</Frage>
-        <Antwort1>3</Antwort1>
-        <Antwort2>2</Antwort2>
-        <Antwort3>+#?!)�=�?"$</Antwort3>
-        <Antwort4>Two, Two and One makes Three, it was destiny!</Antwort4>
-<Korrekte_Antwort>0</Korrekte_Antwort>
+        <Frage>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</Frage>
+        <Antwort1>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</Antwort1>
+        <Antwort2>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</Antwort2>
+        <Antwort3>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</Antwort3>
+        <Antwort4>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</Antwort4>
+        <Korrekte_Antwort>0</Korrekte_Antwort>
     </FrageUndAntwort>
-    </Questionnaire>
+</Questionnaire>

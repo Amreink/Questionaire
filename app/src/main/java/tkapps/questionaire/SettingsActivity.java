@@ -10,6 +10,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.w3c.dom.Document;
@@ -200,7 +202,7 @@ public class SettingsActivity extends AppCompatActivity {
             button_help.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //Tu Dinge!
+                    exitHelp();
                 }
             });
 
@@ -242,6 +244,24 @@ public class SettingsActivity extends AppCompatActivity {
         NodeList nodeList = element.getElementsByTagName(tag).item(0).getChildNodes();
         Node node = nodeList.item(0);
         return node.getNodeValue();
+    }
+
+    public void exitHelp(){
+        setContentView(R.layout.activity_help);
+
+        TextView textView_help = (TextView) findViewById(R.id.textView_help);
+        textView_help.setText(R.string.help_xml);
+
+        ImageView imageView_help = (ImageView) findViewById(R.id.imageView_help);
+        imageView_help.setImageResource(R.drawable.interrogation_help);
+
+        Button button_exitHelp = (Button) findViewById(R.id.button_exitHelp);
+        button_exitHelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showSettings();
+            }
+        });
     }
 }
 

@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
@@ -218,18 +219,18 @@ public class MainActivity extends AppCompatActivity {
     //Beim klick auf Hilfe landet man hier - Logik für Hilfsansicht
     public void exitHelp(){
         setContentView(R.layout.activity_help);
+        TextView textView_help = (TextView)findViewById(R.id.textView_help);
+        textView_help.setText(R.string.help_main);
 
         Button button_exitHelp = (Button) findViewById(R.id.button_exitHelp);
         button_exitHelp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.activity_main);
-                Intent intent = getIntent();
-                overridePendingTransition(0,0);
                 finish();
                 overridePendingTransition(0,0);
+                Intent intent = getIntent();
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(intent);
-                overridePendingTransition(0,0);
             }
         });
     }
