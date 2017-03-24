@@ -32,6 +32,15 @@
     <string name="skip">Überspringen</string>
     <string name="help">Hilfe</string>
     <string name="reset">Zurücksetzen</string>
+    <string name="send">Absenden</string>
+    <string name="name">Name</string>
+    <string name="email">E-Mail</string>
+    <string name="congrats">Vielen Dank!</string>
+    <string name="acceptGTCT">AGB*</string>
+    <string name="badName">Ungültiger Name.</string>
+    <string name="badEmail">Ungültige E-Mail-Adresse.</string>
+    <string name="dataSaved">Daten gespeichert.</string>
+    <string name="resetLeaderboard">Bestenliste zurückgesetzt.</string>
 
     <string name="help_main">Beim ersten Aufrufen der "Einstellungen" müssen Sie ein Passwort
         festlegen. Vergessen Sie das Passwort nicht, es schützt Ihre Einstellungen vor unbefugten Änderungen.\n\n
@@ -42,6 +51,8 @@
     <string name="help_xml">Um einen Fragenkatalog zu importieren tippen Sie bitte auf "Import". Suchen
         Sie anschließend mit dem Datei-Browser die gewünschte XML-Datei.\n\n
         Fragenkatalog-Schema:</string>
+
+    <string name="gtct"></string>
 
     <string name="ok">Alles klar!</string>
 </resources>

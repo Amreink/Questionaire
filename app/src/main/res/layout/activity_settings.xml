@@ -19,158 +19,169 @@
         android:textColor="@android:color/background_light"
         android:textSize="40sp" />
 
-    <RelativeLayout
-        android:id="@+id/relativeLayoutXML"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="5dp"
-        android:background="@android:color/holo_blue_dark"
-        android:clickable="false"
-        android:padding="10dp"
         android:layout_below="@+id/textView_settings">
 
-        <Button
-            android:id="@+id/button_importXML"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/textView_XML"
-            android:layout_marginRight="30dp"
-            android:text="@string/xml_import" />
-
-        <Button
-            android:id="@+id/button_helpXML"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/textView_XML"
-            android:layout_marginLeft="30dp"
-            android:text="@string/xml_help" />
-
-        <Button
-            android:id="@+id/button_exportXML"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView_XML"
-            android:layout_centerHorizontal="true"
-            android:text="@string/export" />
-
-        <TextView
-            android:id="@+id/textView_XML"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:ellipsize="none"
-            android:text="@string/xml"
-            android:textColor="@android:color/background_light"
-            android:textSize="30sp"
-            android:textAlignment="center"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/relativeLayoutPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/relativeLayoutXML"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
-        android:background="@android:color/holo_blue_dark"
-        android:clickable="false"
-        android:padding="10dp">
-
-        <TextView
-            android:id="@+id/textView_password"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/password"
-            android:textAlignment="center"
-            android:textColor="@android:color/background_light"
-            android:textSize="30sp" />
+            >
 
-        <Button
-            android:id="@+id/button_changePassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView_password"
-            android:text="@string/change_password" />
-    </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/relativeLayoutXML"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/holo_blue_dark"
+                android:clickable="false"
+                android:padding="10dp">
 
-    <RelativeLayout
-        android:id="@+id/relativeLayoutLogo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/relativeLayoutPassword"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
-        android:background="@android:color/holo_blue_dark"
-        android:clickable="false"
-        android:padding="10dp">
+                <Button
+                    android:id="@+id/button_importXML"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/textView_XML"
+                    android:layout_marginRight="30dp"
+                    android:text="@string/xml_import" />
 
-        <TextView
-            android:id="@+id/textView_logo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/logo"
-            android:textAlignment="center"
-            android:textColor="@android:color/background_light"
-            android:textSize="30sp" />
+                <Button
+                    android:id="@+id/button_helpXML"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/textView_XML"
+                    android:layout_marginLeft="30dp"
+                    android:text="@string/xml_help" />
 
-        <Button
-            android:id="@+id/button_changeLogo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView_logo"
-            android:text="@string/change_logo" />
-    </RelativeLayout>
+                <Button
+                    android:id="@+id/button_exportXML"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_XML"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/export" />
 
-    <RelativeLayout
-        android:id="@+id/relativeLayoutLeaderboard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/relativeLayoutLogo"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
-        android:background="@android:color/holo_blue_dark"
-        android:clickable="false"
-        android:padding="10dp">
+                <TextView
+                    android:id="@+id/textView_XML"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:ellipsize="none"
+                    android:text="@string/xml"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="30sp" />
 
-        <TextView
-            android:id="@+id/textView_leaderboard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/leaderboard"
-            android:textAlignment="center"
-            android:textColor="@android:color/background_light"
-            android:textSize="30sp" />
+            </RelativeLayout>
 
-        <Button
-            android:id="@+id/button_leaderboardReset"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/textView_leaderboard"
-            android:text="@string/reset" />
+            <RelativeLayout
+                android:id="@+id/relativeLayoutPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayoutXML"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/holo_blue_dark"
+                android:clickable="false"
+                android:padding="10dp">
 
-        <Button
-            android:id="@+id/button_settingsLeaderboardExport"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingRight="40dp"
-            android:paddingLeft="40dp"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/textView_leaderboard"
-            android:text="@string/export"
-            android:textAlignment="center"/>
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/textView_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/password"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/button_changePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_password"
+                    android:text="@string/change_password" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutLogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayoutPassword"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/holo_blue_dark"
+                android:clickable="false"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/textView_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/logo"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/button_changeLogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_logo"
+                    android:text="@string/change_logo" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutLeaderboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayoutLogo"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/holo_blue_dark"
+                android:clickable="false"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/textView_leaderboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/leaderboard"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/button_leaderboardReset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/textView_leaderboard"
+                    android:text="@string/reset" />
+
+                <Button
+                    android:id="@+id/button_settingsLeaderboardExport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/textView_leaderboard"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:text="@string/export"
+                    android:textAlignment="center" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

@@ -53,6 +53,8 @@
         android:layout_alignParentBottom="true"
         android:layout_margin="10dp"
         android:padding="10dp"
-        android:text="@string/ok" />
+        android:text="@string/ok"
+        android:textSize="18sp"
+        android:background="@android:color/background_light"/>
 
 </RelativeLayout>

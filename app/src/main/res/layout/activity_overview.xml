@@ -11,6 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
+        android:layout_alignParentTop="true"
+        android:padding="10dp"
         android:text="@string/result"
         android:textColor="@android:color/background_light"
         android:textSize="40sp"
@@ -40,10 +42,11 @@
         android:id="@+id/button_goOn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView_score"
+        android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
         android:text="@string/goOn"
-        android:textSize="30sp"
-        android:layout_marginLeft="50sp"
-        android:padding="15sp"/>
+        android:textSize="20sp"
+        android:layout_margin="20sp"
+        android:padding="10sp"
+        android:background="@android:color/background_light"/>
 </RelativeLayout>

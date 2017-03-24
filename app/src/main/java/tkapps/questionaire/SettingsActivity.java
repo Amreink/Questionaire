@@ -64,8 +64,7 @@ public class SettingsActivity extends AppCompatActivity {
                             try {
                                 // Get the file path from the URI
                                 final String path = tkapps.questionaire.afilechooser.utils.FileUtils.getPath(this, uri);
-                                Toast.makeText(SettingsActivity.this,
-                                        "File Selected: " + path, Toast.LENGTH_LONG).show();
+
                                 try {
                                     //Lese die XML ein
                                     File fXmlFile = new File(path);
@@ -181,7 +180,9 @@ public class SettingsActivity extends AppCompatActivity {
             Button button_import = (Button) findViewById(R.id.button_importXML);
             Button button_help = (Button) findViewById(R.id.button_helpXML);
             Button button_export = (Button) findViewById(R.id.button_exportXML);
-            Button button_changePassword = (Button)findViewById(R.id.button_changePassword);
+            Button button_changePassword = (Button) findViewById(R.id.button_changePassword);
+            Button button_resetLeaderboard = (Button) findViewById(R.id.button_leaderboardReset);
+            Button button_exportLeaderboard = (Button) findViewById(R.id.button_settingsLeaderboardExport);
 
             //Datenbankanbindung
             dataStore = DataStore.getInstance(getApplicationContext());
@@ -197,7 +198,6 @@ public class SettingsActivity extends AppCompatActivity {
                     showChooser();
                 }
             });
-
             //Button button_help soll Hilfe für die Erstellung eigener Fragenkataloge anzeigen
             button_help.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -213,7 +213,6 @@ public class SettingsActivity extends AppCompatActivity {
                     //Tu Dinge!
                 }
             });
-            //Bestenliste zurücksetzen
 
             //Passwort ändern
             button_changePassword.setOnClickListener(new View.OnClickListener() {
@@ -222,7 +221,23 @@ public class SettingsActivity extends AppCompatActivity {
                     setPassword();
                 }
             });
-
+            //Bestenliste zurücksetzen
+            button_resetLeaderboard.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dataStore.removeLeaderboard();
+                    Toast.makeText(SettingsActivity.this, R.string.resetLeaderboard, Toast.LENGTH_LONG).show();
+                }
+            });
+            //Bestenliste exportieren
+            button_exportLeaderboard.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ScoreListEntry test = (ScoreListEntry) dataStore.getScoreListEntry();
+                    int x = test.getScore();
+                    Toast.makeText(SettingsActivity.this, x, Toast.LENGTH_SHORT).show();
+                }
+            });
         }
 
     //Zeigt den Dateibrowser an
