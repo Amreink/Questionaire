@@ -3,6 +3,7 @@ package tkapps.questionaire.activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -20,6 +21,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import java.io.File;
+import java.io.FileOutputStream;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -282,8 +284,46 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     //Die Bestenliste als .csv exportieren
-    public void exportLeaderboard(){
+    public void exportLeaderboard() {
 
+        //Cursor
+        Cursor cursor = dataStore.getScoreboard();
+        FileOutputStream outputStream;
+
+        if(!cursor.moveToFirst()){
+            Toast.makeText(this, "Kein Eintrag vorhanden", Toast.LENGTH_SHORT).show();
+        }
+
+        File file = new File(getExternalFilesDir(null), "Bestenliste.csv");
+        try {
+            outputStream = new FileOutputStream(file);
+            
+            do{
+                // if any of the columns have commas in their values, you will have to do more involved
+                // checking here to ensure they are escaped properly in the csv
+
+                // the numbes are column indexes. if you care about the order of the columns in your
+                // csv, you may want to move them around
+
+                outputStream.write(cursor.getString(0).getBytes());
+                outputStream.write(",".getBytes());
+                outputStream.write(cursor.getString(1).getBytes());
+                outputStream.write(",".getBytes());
+                outputStream.write(cursor.getString(2).getBytes());
+                outputStream.write(",".getBytes());
+                outputStream.write(cursor.getString(3).getBytes());
+                outputStream.write("\n".getBytes());
+
+            } while(cursor.moveToNext());
+            outputStream.flush();
+            outputStream.close();
+            Toast.makeText(this, "CSV erfolgreich exportiert", Toast.LENGTH_SHORT).show();
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+        }
+        cursor.close();
     }
 }
 

@@ -16,6 +16,7 @@ import tkapps.questionaire.data.DataStore;
 public class AddScoreActivity extends AppCompatActivity {
 
     private DataStore dataStore;
+    public static int Score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,17 @@ public class AddScoreActivity extends AppCompatActivity {
         textView_score.setText(Integer.toString(QuizActivity.scoreCounter));
 
         dataStore = DataStore.getInstance(getApplicationContext());
+
+        if (savedInstanceState == null) {
+            Bundle extras = getIntent().getExtras();
+            if(extras == null) {
+                Score = 0;
+            } else {
+                Score = extras.getInt("INT_I_NEED");
+            }
+        } else {
+            Score = (int) savedInstanceState.getSerializable("INT_I_NEED");
+        }
 
         Button button_skip = (Button) findViewById(R.id.button_skip);
         button_skip.setOnClickListener(new View.OnClickListener() {

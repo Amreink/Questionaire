@@ -130,14 +130,14 @@ public class DataStore {
     public List<ScoreListEntry> getScoreListEntry(){
         List<ScoreListEntry> scorelist = new ArrayList<>();
 
-        DbCursorWrapper cursor = queryScore(null, null);
+        DbCursorWrapper cursorScore = queryScore(null, null);
         try{
-            cursor.moveToFirst();
-            while(!cursor.isAfterLast()) {
-                scorelist.add(cursor.getScore());
-                cursor.moveToNext();
+            cursorScore.moveToFirst();
+            while(!cursorScore.isAfterLast()) {
+                scorelist.add(cursorScore.getScore());
+                cursorScore.moveToNext();
             }
-        } finally {cursor.close(); }
+        } finally {cursorScore.close(); }
         return scorelist;
     }
 
@@ -146,4 +146,11 @@ public class DataStore {
         db.execSQL("delete from " + DbSchema.ScoreTable.SCORENAME);
         db.execSQL("vacuum");
     }
+
+    //Gibt Anzahl der Fragen aus
+    public Cursor getScoreboard(){
+        Cursor c = db.rawQuery("SELECT * FROM Score",null);;
+        return c;
+    }
+
 }

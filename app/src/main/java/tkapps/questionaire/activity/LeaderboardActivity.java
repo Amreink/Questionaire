@@ -18,6 +18,7 @@ import tkapps.questionaire.data.DataStore;
 public class LeaderboardActivity extends AppCompatActivity {
 
     private DataStore dataStore;
+    private ArrayAdapter adapter;
 
     public class LeaderboardAdapter extends ArrayAdapter {
         public LeaderboardAdapter(List items) {
@@ -45,14 +46,13 @@ public class LeaderboardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leaderboard);
-
         dataStore = DataStore.getInstance(getApplicationContext());
 
         //Eigener Adapter für Leaderboard erstellt
-        LeaderboardAdapter leaderboardlistAdapter = new LeaderboardAdapter(dataStore.getScoreListEntry());
+        adapter = new LeaderboardAdapter(dataStore.getScoreListEntry());
 
         ListView listView_leaderboard = (ListView) findViewById(R.id.listView_leaderboard);
-        listView_leaderboard.setAdapter(leaderboardlistAdapter);
+        listView_leaderboard.setAdapter(adapter);
     }
 
 }

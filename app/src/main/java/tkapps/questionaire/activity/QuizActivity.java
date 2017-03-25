@@ -122,6 +122,7 @@ public class QuizActivity extends AppCompatActivity {
             public void onClick(View v) {
                 finish();
                 Intent intent = new Intent(QuizActivity.this, AddScoreActivity.class);
+                intent.putExtra("INT_I_NEED", scoreCounter);
                 startActivity(intent);
             }
         });
