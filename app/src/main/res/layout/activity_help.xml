@@ -4,7 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@android:color/holo_blue_dark"
-    tools:context="tkapps.questionaire.MainActivity">
+    tools:context="tkapps.questionaire.activity.MainActivity">
 
 
     <TextView

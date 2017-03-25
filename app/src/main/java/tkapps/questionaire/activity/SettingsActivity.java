@@ -1,4 +1,4 @@
-package tkapps.questionaire;
+package tkapps.questionaire.activity;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
@@ -24,6 +24,9 @@ import java.io.File;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import tkapps.questionaire.Answer;
+import tkapps.questionaire.Interrogation;
+import tkapps.questionaire.R;
 import tkapps.questionaire.data.DataStore;
 
 public class SettingsActivity extends AppCompatActivity {
@@ -233,9 +236,7 @@ public class SettingsActivity extends AppCompatActivity {
             button_exportLeaderboard.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    ScoreListEntry test = (ScoreListEntry) dataStore.getScoreListEntry();
-                    int x = test.getScore();
-                    Toast.makeText(SettingsActivity.this, x, Toast.LENGTH_SHORT).show();
+                   exportLeaderboard();
                 }
             });
         }
@@ -261,6 +262,7 @@ public class SettingsActivity extends AppCompatActivity {
         return node.getNodeValue();
     }
 
+    //Steuerung im Hilfe-Fenster
     public void exitHelp(){
         setContentView(R.layout.activity_help);
 
@@ -278,5 +280,11 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
     }
+
+    //Die Bestenliste als .csv exportieren
+    public void exportLeaderboard(){
+
+    }
 }
+
 

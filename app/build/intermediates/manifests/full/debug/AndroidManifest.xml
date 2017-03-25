@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="tkapps.questionaire.MainActivity"
+            android:name="tkapps.questionaire.activity.MainActivity"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,19 +26,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="tkapps.questionaire.QuizActivity"
+            android:name="tkapps.questionaire.activity.QuizActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="tkapps.questionaire.SettingsActivity"
+            android:name="tkapps.questionaire.activity.SettingsActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="tkapps.questionaire.LeaderboardActivity"
+            android:name="tkapps.questionaire.activity.LeaderboardActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="tkapps.questionaire.AddScoreActivity"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize" />
+            android:name="tkapps.questionaire.activity.AddScoreActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

@@ -5,7 +5,7 @@
     android:id="@+id/activity_quiz"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="tkapps.questionaire.QuizActivity">
+    tools:context="tkapps.questionaire.activity.QuizActivity">
 
     <RelativeLayout
         android:id="@+id/relativeLayoutQuestion"
@@ -81,6 +81,7 @@
             android:layout_below="@+id/imageView_Quiz"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="5dp"
+            android:padding="5dp"
             android:gravity="center"
             android:text="Hier steht spaeter die Frage, extra langer text um die Formatierung zu testen"
             android:textColor="@android:color/black"
@@ -93,7 +94,7 @@
             android:layout_below="@+id/textView_question"
             android:layout_marginTop="3sp"
             android:gravity="center"
-            android:background="@android:color/holo_blue_dark"
+            android:background="@android:color/holo_green_dark"
             android:textSize="5dp" />
     </RelativeLayout>
 
@@ -102,14 +103,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/relativeLayoutSkip"
+        android:layout_alignParentBottom="true"
         android:layout_below="@+id/relativeLayoutQuestion">
 
         <ListView
             android:id="@+id/listView_answer"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
+            android:layout_height="fill_parent"
             android:background="@android:color/holo_blue_dark"
             android:padding="5dp" />
     </RelativeLayout>

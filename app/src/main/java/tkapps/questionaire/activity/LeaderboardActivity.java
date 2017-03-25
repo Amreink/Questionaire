@@ -1,4 +1,4 @@
-package tkapps.questionaire;
+package tkapps.questionaire.activity;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -9,9 +9,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
 import java.util.List;
 
+import tkapps.questionaire.R;
+import tkapps.questionaire.ScoreListEntry;
 import tkapps.questionaire.data.DataStore;
 
 public class LeaderboardActivity extends AppCompatActivity {
@@ -23,6 +24,7 @@ public class LeaderboardActivity extends AppCompatActivity {
             super(LeaderboardActivity.this, 0, items);
         }
 
+        //Befüllen der einzelnen Teile der ListView Items
         @NonNull
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {

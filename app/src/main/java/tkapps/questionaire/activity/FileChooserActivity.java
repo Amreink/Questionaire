@@ -1,4 +1,4 @@
-package tkapps.questionaire;
+package tkapps.questionaire.activity;
 
 /**
  * Created by Karsten on 01.03.2017.
@@ -39,6 +39,9 @@ package tkapps.questionaire;
         import android.widget.Toast;
 
         import java.io.File;
+
+        import tkapps.questionaire.FileListFragment;
+        import tkapps.questionaire.R;
 
 /**
  * Main Activity that handles the FileListFragments

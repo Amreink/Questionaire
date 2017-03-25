@@ -41,6 +41,7 @@
     <string name="badEmail">Ungültige E-Mail-Adresse.</string>
     <string name="dataSaved">Daten gespeichert.</string>
     <string name="resetLeaderboard">Bestenliste zurückgesetzt.</string>
+    <string name="back">B</string>
 
     <string name="help_main">Beim ersten Aufrufen der "Einstellungen" müssen Sie ein Passwort
         festlegen. Vergessen Sie das Passwort nicht, es schützt Ihre Einstellungen vor unbefugten Änderungen.\n\n

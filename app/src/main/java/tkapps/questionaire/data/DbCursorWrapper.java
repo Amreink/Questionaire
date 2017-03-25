@@ -50,8 +50,9 @@ public class DbCursorWrapper extends CursorWrapper {
     public ScoreListEntry getScore(){
         String name = getString(getColumnIndex(DbSchema.ScoreTable.Columns.NAME));
         String email = getString(getColumnIndex(DbSchema.ScoreTable.Columns.EMAIL));
-        int score = getColumnIndex(DbSchema.ScoreTable.Columns.SCORE);
+        int score = getInt(getColumnIndex(DbSchema.ScoreTable.Columns.SCORE));
         Boolean agb = getColumnIndex(DbSchema.ScoreTable.Columns.AGB) > 0;
+
         return new ScoreListEntry(name, email, score, agb);
     }
 }

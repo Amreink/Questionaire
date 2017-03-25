@@ -12,7 +12,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,17 +20,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".QuizActivity"
+            android:name=".activity.QuizActivity"
             android:screenOrientation="portrait"></activity>
         <activity
-            android:name=".SettingsActivity"
+            android:name=".activity.SettingsActivity"
             android:windowSoftInputMode="adjustResize"
             android:screenOrientation="portrait"></activity>
         <activity
-            android:name=".LeaderboardActivity"
+            android:name=".activity.LeaderboardActivity"
             android:screenOrientation="portrait"></activity>
         <activity
-            android:name=".AddScoreActivity"
+            android:name=".activity.AddScoreActivity"
             android:screenOrientation="portrait"></activity>
     </application>
 

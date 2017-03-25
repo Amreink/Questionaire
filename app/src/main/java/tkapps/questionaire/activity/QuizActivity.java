@@ -1,4 +1,4 @@
-package tkapps.questionaire;
+package tkapps.questionaire.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +13,9 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import tkapps.questionaire.Answer;
+import tkapps.questionaire.Interrogation;
+import tkapps.questionaire.R;
 import tkapps.questionaire.data.*;
 
 public class QuizActivity extends AppCompatActivity {
@@ -74,7 +77,7 @@ public class QuizActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     questionCounter++;
-                    scoreCounter--;
+                    scoreCounter -= 1;
                     Intent intent = getIntent();
                     finish();
                     startActivity(intent);
@@ -91,7 +94,7 @@ public class QuizActivity extends AppCompatActivity {
                     String meldung = "Antwort ist falsch!";
                     if (answer.isCorrect()) {
                         meldung = "Antwort ist richtig!";
-                        scoreCounter += 3;
+                        scoreCounter += 5;
                     } else {
                         scoreCounter -= 3;
                     }

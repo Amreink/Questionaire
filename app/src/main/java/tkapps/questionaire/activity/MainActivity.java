@@ -1,4 +1,4 @@
-package tkapps.questionaire;
+package tkapps.questionaire.activity;
 
 import android.Manifest;
 import android.content.Intent;
@@ -21,6 +21,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+import tkapps.questionaire.R;
 import tkapps.questionaire.data.DataStore;
 
 public class MainActivity extends AppCompatActivity {
