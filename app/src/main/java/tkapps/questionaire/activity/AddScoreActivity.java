@@ -166,4 +166,12 @@ public class AddScoreActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
+    @Override
+    public void onBackPressed(){
+        QuizActivity.scoreCounter = 0;
+        edit.putString("email", "");
+        edit.putString("name","");
+        edit.commit();
+        finish();
+    }
 }

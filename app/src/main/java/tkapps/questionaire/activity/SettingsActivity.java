@@ -139,9 +139,13 @@ public class SettingsActivity extends AppCompatActivity {
             editor.putString("password", "");
             editor.commit();
 
-            setContentView(R.layout.activity_setpassword);
+            setContentView(R.layout.activity_password);
 
-            Button confirmButton = (Button) findViewById(R.id.button_confirmPassword);
+            TextView textView_password = (TextView) findViewById(R.id.textView_password);
+            textView_password.setText(R.string.setup_password);
+
+            Button confirmButton = (Button) findViewById(R.id.button_enterPassword);
+            confirmButton.setText(R.string.confirm);
             confirmButton.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v){
@@ -160,7 +164,11 @@ public class SettingsActivity extends AppCompatActivity {
 
             setContentView(R.layout.activity_password);
 
+            TextView textView_password = (TextView) findViewById(R.id.textView_password);
+            textView_password.setText(R.string.enter_password);
+
             Button loginButton = (Button) findViewById(R.id.button_enterPassword);
+            loginButton.setText(R.string.sign_in);
             loginButton.setOnClickListener(new View.OnClickListener(){
                 public void onClick(View v) {
                     EditText password = (EditText) findViewById(R.id.password);

@@ -160,10 +160,6 @@
         "source": "C:\\Users\\Timo\\.android\\build-cache\\68eb2194bece236914a7af7e8b00aa2d9035c971\\output\\res\\layout\\abc_alert_dialog_material.xml"
     },
     {
-        "merged": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_setpassword.xml",
-        "source": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\src\\main\\res\\layout\\activity_setpassword.xml"
-    },
-    {
         "merged": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
         "source": "C:\\Users\\Timo\\.android\\build-cache\\68eb2194bece236914a7af7e8b00aa2d9035c971\\output\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
