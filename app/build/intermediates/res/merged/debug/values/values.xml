@@ -330,15 +330,15 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="acceptGTCT">AGB*</string>
     <string name="app_name">Questionaire</string>
-    <string name="back">B</string>
     <string name="badEmail">Ungültige E-Mail-Adresse.</string>
     <string name="badName">Ungültiger Name.</string>
+    <string name="badNameEmail">Name und Email ungütlig.</string>
     <string name="change_logo">Firmenzeichen ändern</string>
     <string name="change_password">Passwort ändern</string>
     <string name="choose_file">Wähle eine Datei</string>
     <string name="chooser_title">Wähle XML-Datei aus</string>
     <string name="confirm">Bestätigen</string>
-    <string name="congrats">Vielen Dank!</string>
+    <string name="congrats">Quiz beendet</string>
     <string name="dataSaved">Daten gespeichert.</string>
     <string name="email">E-Mail</string>
     <string name="empty_directory">Leerer Ordner</string>
@@ -346,7 +346,7 @@
     <string name="error_selecting_file">Fehler beim Öffnen der Datei</string>
     <string name="export">Export</string>
     <string name="goOn">Weiter</string>
-    <string name="gtct"/>
+    <string name="gtct">*: Ihre E-Mail wird nicht an Dritte weitergegeben. Wir verwenden sie lediglich zur Kontaktaufnahme.</string>
     <string name="help">Hilfe</string>
     <string name="help_main">Beim ersten Aufrufen der "Einstellungen" müssen Sie ein Passwort
         festlegen. Vergessen Sie das Passwort nicht, es schützt Ihre Einstellungen vor unbefugten Änderungen.\n\n
@@ -366,6 +366,7 @@
     <string name="password">Passwort</string>
     <string name="question">Frage</string>
     <string name="questionaire">Questionaire</string>
+    <string name="registerForLeaderboard">Hier können Sie sich für die Bestenliste registrieren:</string>
     <string name="reset">Zurücksetzen</string>
     <string name="resetLeaderboard">Bestenliste zurückgesetzt.</string>
     <string name="result">Ergebnis:</string>

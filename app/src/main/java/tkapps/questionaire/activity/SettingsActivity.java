@@ -154,7 +154,6 @@ public class SettingsActivity extends AppCompatActivity {
                     showSettings();
                 }
             });
-
         }
         //Aufforderung zur Passworteingabe falls bereits ein Passwort erstellt wurde
         public void enterPassword() {

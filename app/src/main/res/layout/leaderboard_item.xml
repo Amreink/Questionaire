@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@android:color/background_light"
-    android:padding="5dp">
+    android:padding="10dp">
 
     <TextView
         android:id="@+id/textView_nameLb"
@@ -12,16 +12,15 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:textColor="@android:color/black"
-        android:textSize="18sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textView_scoreLb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toLeftOf="@+id/textView_scoreTxtLb"
-        android:elevation="1dp"
         android:textColor="@android:color/holo_blue_dark"
-        android:textSize="18sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textView_scoreTxtLb"
@@ -30,6 +29,6 @@
         android:layout_marginLeft="5dp"
         android:text="Punkte"
         android:textColor="@android:color/black"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:layout_alignParentRight="true" />
 </RelativeLayout>

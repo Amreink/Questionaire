@@ -33,7 +33,19 @@
 
     </RelativeLayout>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="5dp"
+        android:textColor="@android:color/background_light"
+        android:textAlignment="center"
+        android:background="@android:color/holo_green_dark"
+        android:layout_margin="5dp"
+        android:layout_above="@+id/relativeLayoutMain"
+        android:layout_centerHorizontal="true" />
+
     <RelativeLayout
+        android:id="@+id/relativeLayoutMain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

@@ -11,19 +11,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/congrats"
-        android:textSize="35sp"
+        android:textSize="40sp"
         android:textColor="@android:color/background_light"
         android:layout_centerInParent="true"
         android:layout_alignParentTop="true"
         android:padding="10dp"/>
 
     <RelativeLayout
+        android:id="@+id/relativeLayoutInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:layout_below="@id/textView_scoreToLeaderboard">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/registerForLeaderboard"
+            android:textColor="@android:color/black"
+            android:textSize="16dp"
+            android:padding="10dp"
+            android:maxLines="2" />
+    </RelativeLayout>
+
+    <RelativeLayout
         android:id="@+id/relativeLayoutName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textView_scoreToLeaderboard"
         android:background="@android:color/background_light"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:layout_below="@+id/relativeLayoutInfo"
+        android:layout_alignParentStart="true">
 
         <TextView
             android:id="@+id/textView_name"
@@ -38,7 +57,8 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:padding="20dp"
-            android:textSize="15dp" />
+            android:textSize="15dp"
+            android:inputType="text"/>
     </RelativeLayout>
     <RelativeLayout
         android:id="@+id/relativeLayoutEmail"
@@ -62,7 +82,8 @@
             android:padding="20dp"
             android:textSize="15dp"
             android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:inputType="textEmailAddress"/>
     </RelativeLayout>
     <RelativeLayout
         android:id="@+id/relativeLayoutScore"
@@ -111,38 +132,59 @@
     </RelativeLayout>
 
     <TextView
+        android:id="@+id/textView_greenBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/relativeLayoutScore"
-        android:text="@string/gtct"
-        android:textSize="10sp"
+        android:textSize="5sp"
         android:textColor="@android:color/background_light"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:layout_below="@+id/relativeLayoutScore"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/holo_green_dark"/>
+
+    <TextView
+        android:id="@+id/textView_agb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/gtct"
+        android:textSize="12sp"
+        android:textColor="@android:color/background_light"
+        android:layout_margin="10dp"
         android:padding="10dp"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:layout_below="@+id/textView_greenBar"
+        android:background="@android:color/holo_blue_dark"/>
 
     <Button
         android:id="@+id/button_skip"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="30sp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
         android:background="@android:color/background_light"
-        android:padding="5dp"
         android:text="@string/skip"
-        android:textSize="18sp" />
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/button_send"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/button_skip"
-        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
         android:layout_marginBottom="15dp"
-        android:layout_marginLeft="30sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingRight="25dp"
+        android:paddingLeft="25dp"
         android:background="@android:color/background_light"
-        android:padding="5dp"
         android:text="@string/send"
-        android:textSize="18sp" />
+        android:textSize="20sp"
+        android:textColor="@android:color/holo_green_dark"/>
 </RelativeLayout>

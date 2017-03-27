@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        
         //Die Anzahl der Fragen im aktuellen Fragenkatalog festsellen
         dataStore = DataStore.getInstance(getApplicationContext());
         amountQuestions = dataStore.getAmountQuestions();
