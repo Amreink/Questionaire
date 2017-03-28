@@ -15,6 +15,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import net.rdrei.android.dirchooser.DirectoryChooserActivity;
+import net.rdrei.android.dirchooser.DirectoryChooserConfig;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -27,6 +30,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import tkapps.questionaire.Answer;
+import tkapps.questionaire.CopyAssets;
 import tkapps.questionaire.Interrogation;
 import tkapps.questionaire.R;
 import tkapps.questionaire.data.DataStore;
@@ -38,6 +42,7 @@ public class SettingsActivity extends AppCompatActivity {
     SharedPreferences.Editor editor;
     private static final String TAG = "FileChooserActivity";
     private static final int REQUEST_CODE = 6384; // onActivityResult request
+    private static final int REQUEST_DIRECTORY = 6385; // on ActivityResult request
     // code
 
         @Override
@@ -127,6 +132,18 @@ public class SettingsActivity extends AppCompatActivity {
                             }
                         } else
                             Toast.makeText(this, "Datei ist leer", Toast.LENGTH_SHORT).show();
+                    }
+                    break;
+                case REQUEST_DIRECTORY:
+                    //Export der XML-Datei in ein beliebiges Directory
+
+                    if (resultCode == DirectoryChooserActivity.RESULT_CODE_DIR_SELECTED) {
+                        File file = new File(data
+                                .getStringExtra(DirectoryChooserActivity.RESULT_SELECTED_DIR));
+                        CopyAssets.copyAssets(getApplicationContext(), file);
+
+                    } else {
+                        // Nothing selected
                     }
                     break;
             }
@@ -222,7 +239,26 @@ public class SettingsActivity extends AppCompatActivity {
             button_export.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //Tu Dinge!
+                    Intent chooserIntent = new Intent(SettingsActivity.this, DirectoryChooserActivity.class);
+
+                    /*if (ContextCompat.checkSelfPermission(SettingsActivity.this,
+                            Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                            == PackageManager.PERMISSION_GRANTED) {*/
+
+                        DirectoryChooserConfig config = DirectoryChooserConfig.builder()
+                                .newDirectoryName("DirChooserSample")
+                                .allowReadOnlyDirectory(true)
+                                .allowNewDirectoryNameModification(true)
+                                .build();
+
+                        chooserIntent.putExtra(DirectoryChooserActivity.EXTRA_CONFIG, config);
+
+// REQUEST_DIRECTORY is a constant integer to identify the request, e.g. 0
+                        startActivityForResult(chooserIntent, REQUEST_DIRECTORY);
+                    /*}else {
+                        Toast.makeText(SettingsActivity.this, "Keine Berechtigung gegeben!", Toast.LENGTH_SHORT).show();
+                    }*/
+
                 }
             });
 

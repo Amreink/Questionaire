@@ -3,24 +3,17 @@ package tkapps.questionaire.activity;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-
+import tkapps.questionaire.CopyAssets;
 import tkapps.questionaire.R;
 import tkapps.questionaire.data.DataStore;
 
@@ -104,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     //Kopiere die Dateien aus Assets in den Ordner
-                    copyAssets();
+                    CopyAssets.copyAssets(getApplicationContext(), getExternalFilesDir(null));
                     //Berechtigung wurde erteilt, fahre mit App fort
                     permGranted();
 
@@ -179,45 +172,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //Methode um Dateien des Assets-Ordners in das App-Verzeichnis zu kopieren
-    //Wird benötigt, damit der Nutzer sich die XML aus dem Verzeichnis kopieren kann
-    private void copyAssets() {
-        AssetManager assetManager = getAssets();
-        String[] files = null;
-        try {
-            files = assetManager.list("");
-        } catch (IOException e) {
-            Log.e("tag", "Failed to get asset file list.", e);
-        }
-        for(String filename : files) {
-            InputStream in = null;
-            OutputStream out = null;
-            try {
-
-                in = assetManager.open(filename);
-                File outFile = new File(getExternalFilesDir(null), filename);
-                out = new FileOutputStream(outFile);
-                copyFile(in, out);
-                in.close();
-                in = null;
-                out.flush();
-                out.close();
-                out = null;
-
-            } catch(IOException e) {
-                Log.e("tag", "Failed to copy asset file: " + filename, e);
-            }
-        }
-    }
-    //Hilfsmethode für copyAssets()
-    private void copyFile(InputStream in, OutputStream out) throws IOException {
-        byte[] buffer = new byte[1024];
-        int read;
-        while((read = in.read(buffer)) != -1){
-            out.write(buffer, 0, read);
-        }
-    }
-    //Beim klick auf Hilfe landet man hier - Logik für Hilfsansicht
+   //Beim klick auf Hilfe landet man hier - Logik für Hilfsansicht
     public void exitHelp(){
         setContentView(R.layout.activity_help);
         TextView textView_help = (TextView)findViewById(R.id.textView_help);

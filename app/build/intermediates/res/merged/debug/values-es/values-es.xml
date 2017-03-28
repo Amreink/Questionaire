@@ -19,6 +19,16 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Compartir con"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Compartir con %s"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Contraer"</string>
+    <string name="cancel_label">Cancelar</string>
+    <string name="confirm_label">Confirmar</string>
+    <string name="create_folder_error">No se pudo crear la carpeta</string>
+    <string name="create_folder_error_already_exists">La carpeta ya existe</string>
+    <string name="create_folder_error_no_write_access">No se puede escribir en esta carpeta</string>
+    <string name="create_folder_label">Crear carpeta</string>
+    <string name="create_folder_msg">¿Crear carpeta "%1$s"?</string>
+    <string name="create_folder_success">Carpeta creada</string>
     <string msgid="146198913615257606" name="search_menu_title">"Buscar"</string>
+    <string name="selected_folder_label">Carpeta elegida:</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"+999"</string>
+    <string name="up_label">Atrás</string>
 </resources>
