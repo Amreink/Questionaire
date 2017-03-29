@@ -32,7 +32,7 @@
             android:screenOrientation="portrait"></activity>
         <activity
             android:name=".activity.AddScoreActivity"
-            android:windowSoftInputMode="adjustResize"
+            android:windowSoftInputMode="stateHidden|adjustResize"
             android:screenOrientation="portrait"></activity>
         <activity
             android:name="net.rdrei.android.dirchooser.DirectoryChooserActivity"

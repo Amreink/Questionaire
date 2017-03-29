@@ -85,7 +85,7 @@ ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\Andr
 	android:screenOrientation
 		ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:36:13-49
 	android:windowSoftInputMode
-		ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:35:13-55
+		ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:35:13-67
 	android:name
 		ADDED from C:\Users\Karsten\AndroidStudioProjects\Questionaire\app\src\main\AndroidManifest.xml:34:13-54
 activity#net.rdrei.android.dirchooser.DirectoryChooserActivity
