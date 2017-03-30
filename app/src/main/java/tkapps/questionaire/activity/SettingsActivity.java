@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -124,11 +125,13 @@ public class SettingsActivity extends AppCompatActivity {
             setContentView(R.layout.activity_settings);
 
             Button button_import = (Button) findViewById(R.id.button_importXML);
-            Button button_help = (Button) findViewById(R.id.button_helpXML);
+            ImageButton button_helpXML = (ImageButton) findViewById(R.id.button_helpXML);
             Button button_export = (Button) findViewById(R.id.button_exportXML);
             Button button_changePassword = (Button) findViewById(R.id.button_changePassword);
+            Button button_changeLogo = (Button) findViewById(R.id.button_changeLogo);
             Button button_resetLeaderboard = (Button) findViewById(R.id.button_leaderboardReset);
             Button button_exportLeaderboard = (Button) findViewById(R.id.button_settingsLeaderboardExport);
+            ImageButton button_helpLB = (ImageButton) findViewById(R.id.button_helpLB);
 
             //Datenbankanbindung
             dataStore = DataStore.getInstance(getApplicationContext());
@@ -145,10 +148,10 @@ public class SettingsActivity extends AppCompatActivity {
                 }
             });
             //Button button_help soll Hilfe für die Erstellung eigener Fragenkataloge anzeigen
-            button_help.setOnClickListener(new View.OnClickListener() {
+            button_helpXML.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    exitHelp();
+                    showHelp(1);
                 }
             });
 
@@ -186,6 +189,13 @@ public class SettingsActivity extends AppCompatActivity {
                     setPassword();
                 }
             });
+            //Firmenlogo ändern
+            button_changeLogo.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    //Todo hier eine lösung implementieren ;)
+                }
+            });
             //Bestenliste zurücksetzen
             button_resetLeaderboard.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -201,18 +211,28 @@ public class SettingsActivity extends AppCompatActivity {
                    exportLeaderboard();
                 }
             });
+            //Hilfe für Bestenliste anzeigen
+            button_helpLB.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    showHelp(2);
+                }
+            });
         }
 
     //Steuerung im Hilfe-Fenster
-    public void exitHelp(){
+    public void showHelp(int index){
         setContentView(R.layout.activity_help);
 
         TextView textView_help = (TextView) findViewById(R.id.textView_help);
-        textView_help.setText(R.string.help_xml);
-
         ImageView imageView_help = (ImageView) findViewById(R.id.imageView_help);
-        imageView_help.setImageResource(R.drawable.interrogation_help);
 
+        if(index == 1) {
+            textView_help.setText(R.string.help_xml);
+            imageView_help.setImageResource(R.drawable.interrogation_help);
+        } else if (index == 2){
+            textView_help.setText(R.string.help_lb);
+        }
         Button button_exitHelp = (Button) findViewById(R.id.button_exitHelp);
         button_exitHelp.setOnClickListener(new View.OnClickListener() {
             @Override

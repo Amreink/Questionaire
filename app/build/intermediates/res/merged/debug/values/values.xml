@@ -339,7 +339,8 @@
     <string name="change_logo">Firmenzeichen ändern</string>
     <string name="change_password">Passwort ändern</string>
     <string name="choose_file">Wähle eine Datei</string>
-    <string name="chooser_title">Wähle XML-Datei aus</string>
+    <string name="chooser_img">Wähle eine Bild-Datei aus</string>
+    <string name="chooser_xml">Wähle XML-Datei aus</string>
     <string name="confirm">Bestätigen</string>
     <string name="confirm_label">Confirm</string>
     <string name="congrats">Quiz beendet</string>
@@ -358,13 +359,22 @@
     <string name="goOn">Weiter</string>
     <string name="gtct">*: Ihre E-Mail wird nicht an Dritte weitergegeben. Wir verwenden sie lediglich zur Kontaktaufnahme.</string>
     <string name="help">Hilfe</string>
+    <string name="help_lb">Export:\n Wenn Sie die Bestenliste über den Button "Export" exportieren, so wird aus
+    den vorhandenen Daten eine .csv erstellt die Sie anschließend einfach via Excel auslesen können. \n\n
+    Abgelegt wird die Datei im Ordner: \n "/Android/data/tkapps.questionaire/files" (Internal Storage)\n\n
+    Zurücksetzen:\n Die Bestenliste kann über den Button "Zurücksetzen" gelöscht werden. Außerdem wird die Bestenliste
+     automatisch gelöscht, wenn ein neuer Fragenkatalog eingelesen wird.</string>
     <string name="help_main">Beim ersten Aufrufen der "Einstellungen" müssen Sie ein Passwort
         festlegen. Vergessen Sie das Passwort nicht, es schützt Ihre Einstellungen vor unbefugten Änderungen.\n\n
         Um das Quiz starten zu können müssen Sie zunächst in den "Einstellungen" einen Fragenkatalog importieren.
-        Genauere Anweisungen finden Sie in den "Einstellungen" unter "Fragenkatalog".
+        Genauere Anweisungen finden Sie in den "Einstellungen" unter "Fragenkatalog".\n\n
+        Punkteverteilung:\n
+        Korrekte Antwort: 5 Punkte\n
+        Falsche Antwort: -3 Punkte\n
+        Frage überspringen: -1 Punkt
     </string>
-    <string name="help_xml">Um einen Fragenkatalog zu importieren tippen Sie bitte auf "Import". Suchen
-        Sie anschließend mit dem Datei-Browser die gewünschte XML-Datei.\n\n
+    <string name="help_xml">Import:\n Um einen Fragenkatalog zu importieren tippen Sie bitte auf "Import". Suchen
+        Sie anschließend mit dem Datei-Browser die gewünschte XML-Datei aus.\n\n
         Fragenkatalog-Schema:</string>
     <string name="hint">...</string>
     <string name="internal_storage">Internal storage</string>

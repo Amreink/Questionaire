@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
+        "outputFile": "C:\\Users\\Timo\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 106
                 },
                 "from": {
-                    "file": "C:\\Users\\Karsten\\.android\\build-cache\\29ca6c23b1620245d2cf9be747f7e2573fab4133\\output\\res\\values-port\\values-port.xml",
+                    "file": "C:\\Users\\Timo\\.android\\build-cache\\8ef46d7169957a3da3e9371e45f9679c88baf944\\output\\res\\values-port\\values-port.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
