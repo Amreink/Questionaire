@@ -22,6 +22,7 @@ import java.io.FileOutputStream;
 import tkapps.questionaire.CopyAssets;
 import tkapps.questionaire.R;
 import tkapps.questionaire.data.DataStore;
+import tkapps.questionaire.util.PNGFileReader;
 import tkapps.questionaire.util.XMLFileReader;
 
 public class SettingsActivity extends AppCompatActivity {
@@ -189,11 +190,13 @@ public class SettingsActivity extends AppCompatActivity {
                     setPassword();
                 }
             });
+
             //Firmenlogo ändern
             button_changeLogo.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v){
                     //Todo hier eine lösung implementieren ;)
+                    PNGFileReader.openDialogToReadPNG(SettingsActivity.this);
                 }
             });
             //Bestenliste zurücksetzen

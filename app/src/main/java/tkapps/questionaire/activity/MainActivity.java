@@ -2,7 +2,11 @@ package tkapps.questionaire.activity;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.ActivityCompat;
@@ -10,8 +14,11 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.File;
 
 import tkapps.questionaire.CopyAssets;
 import tkapps.questionaire.R;
@@ -25,64 +32,71 @@ public class MainActivity extends AppCompatActivity {
     //Feststellen ob Fragenkatalog vorhanden ist
     private DataStore dataStore;
     public static int amountQuestions = 0;
+    public SharedPreferences pref;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Die Anzahl der Fragen im aktuellen Fragenkatalog festsellen
+        //Die Anzahl der Fragen im aktuellen Fragenkatalog feststellen
         dataStore = DataStore.getInstance(getApplicationContext());
         amountQuestions = dataStore.getAmountQuestions();
 
         //Beantragen der Berechtigung
-        if (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) {
+        if (Build.VERSION.SDK_INT>=23) {
+            if (ContextCompat.checkSelfPermission(this,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                    != PackageManager.PERMISSION_GRANTED) {
 
-            // Should we show an explanation?
-            // Nicht nötig da Berechtigung angefragt wird
-            if (!toastShown) {
-                Toast.makeText(this, "Die App muss einen Ordner anlegen.", Toast.LENGTH_SHORT).show();
-                toastShown = true;
-            }
-            //App um 2 Sekunden verzögern, damit Nutzer Zeit hat den Toast zu lesen
-            Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                public void run() {
-                    //Hier wird die Berechtigung beim Nutzer angefragt (Mit 2 Sek Verzögerung)
-                    if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this,
-                            Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-
-                        // Show an explanation to the user *asynchronously* -- don't block
-                        // this thread waiting for the user's response! After the user
-                        // sees the explanation, try again to request the permission.
-                        Toast.makeText(MainActivity.this, "Die App muss nur einen Ordner für die XML anlegen. Es geschieht nichts mit Ihren Daten.", Toast.LENGTH_SHORT).show();
-                        Handler handler1 = new Handler();
-                        handler1.postDelayed(new Runnable() {
-                            public void run() {
-                                ActivityCompat.requestPermissions(MainActivity.this,
-                                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                                        MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE);
-                            }
-                        }, 4000);
-
-                    } else {
-
-                        // No explanation needed, we can request the permission.
-
-                        ActivityCompat.requestPermissions(MainActivity.this,
-                                new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                                MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE);
-
-                        // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
-                        // app-defined int constant. The callback method gets the
-                        // result of the request.
-                    }
+                // Should we show an explanation?
+                // Nicht nötig da Berechtigung angefragt wird
+                if (!toastShown) {
+                    Toast.makeText(this, "Die App muss einen Ordner anlegen.", Toast.LENGTH_SHORT).show();
+                    toastShown = true;
                 }
-            }, 2000);
+                //App um 2 Sekunden verzögern, damit Nutzer Zeit hat den Toast zu lesen
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    public void run() {
+                        //Hier wird die Berechtigung beim Nutzer angefragt (Mit 2 Sek Verzögerung)
+                        if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this,
+                                Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
 
-        } else{
+                            // Show an explanation to the user *asynchronously* -- don't block
+                            // this thread waiting for the user's response! After the user
+                            // sees the explanation, try again to request the permission.
+                            Toast.makeText(MainActivity.this, "Die App muss nur einen Ordner für die XML anlegen. Es geschieht nichts mit Ihren Daten.", Toast.LENGTH_SHORT).show();
+                            Handler handler1 = new Handler();
+                            handler1.postDelayed(new Runnable() {
+                                public void run() {
+                                    ActivityCompat.requestPermissions(MainActivity.this,
+                                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                                            MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE);
+                                }
+                            }, 4000);
+
+                        } else {
+
+                            // No explanation needed, we can request the permission.
+
+                            ActivityCompat.requestPermissions(MainActivity.this,
+                                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                                    MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE);
+
+                            // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
+                            // app-defined int constant. The callback method gets the
+                            // result of the request.
+                        }
+                    }
+                }, 2000);
+
+            } else {
+                permGranted();
+            }
+        } else {
+            Toast.makeText(this, "Unter 23", Toast.LENGTH_SHORT).show();
             permGranted();
         }
     }
@@ -102,10 +116,7 @@ public class MainActivity extends AppCompatActivity {
                     permGranted();
 
                 } else {
-
-                    //ToDo: Permission erneut beantragen oder App sauber beenden
                     finish();
-
                 }
                 return;
             }
@@ -118,14 +129,27 @@ public class MainActivity extends AppCompatActivity {
     //Verhalten der Activity wenn die Berechtigungen erteilt wurden
     private void permGranted(){
 
-
-
         //Button initialisieren
         Button button_start = (Button) findViewById(R.id.button_start);
         Button button_settings = (Button) findViewById(R.id.button_settings);
         Button button_help = (Button) findViewById(R.id.button_help);
         Button button_leaderboard = (Button) findViewById(R.id.button_leaderboard);
 
+        //ImageView initialisieren
+        ImageView imageView_mainCompany = (ImageView) findViewById(R.id.imageView_mainCompany);
+
+        //Logowechsel
+        pref = getSharedPreferences("Questionaire", MODE_PRIVATE);
+        if(!pref.getString("Logo", "").isEmpty()){
+            File imgFile = new  File(pref.getString("Logo", ""));
+
+            if(imgFile.exists()){
+                Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+                imageView_mainCompany.setImageBitmap(myBitmap);
+            } else{
+                Toast.makeText(this, "Logo wurde verschoben oder gelöscht.", Toast.LENGTH_SHORT).show();
+            }
+        }
 
         //Button button_start ruft die QuizActivity auf wenn ein Fragenkatalog vorhanden ist
         button_start.setOnClickListener(new View.OnClickListener() {

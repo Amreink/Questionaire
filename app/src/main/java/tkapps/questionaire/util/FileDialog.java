@@ -65,7 +65,7 @@ public class FileDialog {
             }
         });
         dialog = builder.show();
-        dialog.setCancelable(false);
+        dialog.setCancelable(true);
         return dialog;
     }
 
