@@ -3,7 +3,7 @@
     package="tkapps.questionaire.test" >
 
     <uses-sdk
-        android:minSdkVersion="19"
+        android:minSdkVersion="16"
         android:targetSdkVersion="24" />
 
     <instrumentation

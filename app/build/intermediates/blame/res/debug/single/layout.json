@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
-        "source": "C:\\Users\\Karsten\\.android\\build-cache\\29ca6c23b1620245d2cf9be747f7e2573fab4133\\output\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
-    },
-    {
         "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
         "source": "C:\\Users\\Karsten\\.android\\build-cache\\29ca6c23b1620245d2cf9be747f7e2573fab4133\\output\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "C:\\Users\\Karsten\\.android\\build-cache\\29ca6c23b1620245d2cf9be747f7e2573fab4133\\output\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
         "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
@@ -44,16 +44,16 @@
         "source": "C:\\Users\\Karsten\\.android\\build-cache\\29ca6c23b1620245d2cf9be747f7e2573fab4133\\output\\res\\layout\\notification_template_big_media_narrow.xml"
     },
     {
-        "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_leaderboard.xml",
-        "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\src\\main\\res\\layout\\activity_leaderboard.xml"
+        "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "C:\\Users\\Karsten\\.android\\build-cache\\29ca6c23b1620245d2cf9be747f7e2573fab4133\\output\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
         "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
         "source": "C:\\Users\\Karsten\\.android\\build-cache\\29ca6c23b1620245d2cf9be747f7e2573fab4133\\output\\res\\layout\\abc_screen_content_include.xml"
     },
     {
-        "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
-        "source": "C:\\Users\\Karsten\\.android\\build-cache\\29ca6c23b1620245d2cf9be747f7e2573fab4133\\output\\res\\layout\\abc_list_menu_item_radio.xml"
+        "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_leaderboard.xml",
+        "source": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\src\\main\\res\\layout\\activity_leaderboard.xml"
     },
     {
         "merged": "C:\\Users\\Karsten\\AndroidStudioProjects\\Questionaire\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_settings.xml",

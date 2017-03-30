@@ -1,13 +1,10 @@
 package tkapps.questionaire.activity;
 
-import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,30 +15,19 @@ import android.widget.Toast;
 import net.rdrei.android.dirchooser.DirectoryChooserActivity;
 import net.rdrei.android.dirchooser.DirectoryChooserConfig;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-
 import java.io.File;
 import java.io.FileOutputStream;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-
-import tkapps.questionaire.Answer;
 import tkapps.questionaire.CopyAssets;
-import tkapps.questionaire.Interrogation;
 import tkapps.questionaire.R;
 import tkapps.questionaire.data.DataStore;
+import tkapps.questionaire.util.XMLFileReader;
 
 public class SettingsActivity extends AppCompatActivity {
 
     private DataStore dataStore;
     public SharedPreferences pref;
     SharedPreferences.Editor editor;
-    private static final String TAG = "FileChooserActivity";
-    private static final int REQUEST_CODE = 6384; // onActivityResult request
     private static final int REQUEST_DIRECTORY = 6385; // on ActivityResult request
     // code
 
@@ -64,88 +50,18 @@ public class SettingsActivity extends AppCompatActivity {
         @Override
         protected void onActivityResult(int requestCode, int resultCode, Intent data) {
             switch (requestCode) {
-                case REQUEST_CODE:
-                    // If the file selection was successful
-                    if (resultCode == SettingsActivity.RESULT_OK) {
-                        if (data != null) {
-                            // Get the URI of the selected file
-                            final Uri uri = data.getData();
-                            Log.i(TAG, "Uri = " + uri.toString());
-                            try {
-                                // Get the file path from the URI
-                                final String path = tkapps.questionaire.afilechooser.utils.FileUtils.getPath(this, uri);
-
-                                try {
-                                    //Lese die XML ein
-                                    File fXmlFile = new File(path);
-                                    DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-                                    DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-                                    Document doc = dBuilder.parse(fXmlFile);
-
-                                    //XML Normalisieren (Keine parallelen Knoten etc.)
-                                    Element element=doc.getDocumentElement();
-                                    element.normalize();
-
-                                    NodeList nList = doc.getElementsByTagName("FrageUndAntwort");
-                                    //String[] values = {"Frage", "Antwort1","Anwort2","Antwort3","Antwort4","Korrekte_Antwort"};
-
-                                    for (int i=0; i<nList.getLength(); i++) {
-
-                                        Node node = nList.item(i);
-                                        if (node.getNodeType() == Node.ELEMENT_NODE) {
-                                            Element item = (Element) node;
-
-                                            //Werte auslesen
-                                            String question = getValue("Frage", item);
-                                            String correct_answer =  getValue("Korrekte_Antwort", item);
-
-                                            String[] dbAnswers = {
-                                                    getValue("Antwort1", item),
-                                                    getValue("Antwort2", item),
-                                                    getValue("Antwort3", item),
-                                                    getValue("Antwort4", item)
-                                            };
-
-                                            Answer[] answers = new Answer[4];
-
-                                            //Jeder Antwort mitgeben, ob sie korrekt ist
-                                            for (int counter = 0; counter < 4; counter++) {
-                                                boolean correctAnswer = false;
-                                                if (Integer.parseInt(correct_answer) == counter) {
-                                                    correctAnswer = true;
-                                                }
-                                                answers[counter] = new Answer(dbAnswers[counter], correctAnswer);
-                                            }
-
-                                            Interrogation interrogation = new Interrogation(
-                                                    question, answers[0], answers[1], answers[2], answers[3]);
-                                            //Datensatz abspeichern
-                                            dataStore.addQuestion(interrogation);
-                                        }
-                                    }
-                                    Toast.makeText(SettingsActivity.this, "Xml wurde erfolgreich importiert.", Toast.LENGTH_SHORT).show();
-
-                                } catch (Exception e) {e.printStackTrace();}
-
-                            } catch (Exception e) {
-                                Log.e("FileSelectorActivity", "File select error", e);
-                            }
-                        } else
-                            Toast.makeText(this, "Datei ist leer", Toast.LENGTH_SHORT).show();
-                    }
-                    break;
                 case REQUEST_DIRECTORY:
-                    //Export der XML-Datei in ein beliebiges Directory
+                //Export der XML-Datei in ein beliebiges Directory
 
-                    if (resultCode == DirectoryChooserActivity.RESULT_CODE_DIR_SELECTED) {
-                        File file = new File(data
-                                .getStringExtra(DirectoryChooserActivity.RESULT_SELECTED_DIR));
-                        CopyAssets.copyAssets(getApplicationContext(), file);
+                 if (resultCode == DirectoryChooserActivity.RESULT_CODE_DIR_SELECTED) {
+                     File file = new File(data
+                        .getStringExtra(DirectoryChooserActivity.RESULT_SELECTED_DIR));
+                     CopyAssets.copyAssets(getApplicationContext(), file);
 
-                    } else {
-                        // Nothing selected
-                    }
-                    break;
+                 } else {
+                     // Nothing selected
+                 }
+                 break;
             }
             super.onActivityResult(requestCode, resultCode, data);
         }
@@ -172,6 +88,7 @@ public class SettingsActivity extends AppCompatActivity {
                     editor.putString("password", password.getText().toString());
                     editor.commit();
                     Toast.makeText(SettingsActivity.this,"Passwort erfolgreich geändert.",Toast.LENGTH_LONG).show();
+
                     showSettings();
                 }
             });
@@ -223,8 +140,8 @@ public class SettingsActivity extends AppCompatActivity {
                     //Datenbank leeren
                     //Nötig, damit eine XML nicht mehrmals eingelesen wird
                     dataStore.removeQuestions();
-                    //Dateibrowser öffnen
-                    showChooser();
+                    //Dialogfenster Auswahl XML-Datei öffnen
+                    XMLFileReader.openDialogToReadXML(SettingsActivity.this);
                 }
             });
             //Button button_help soll Hilfe für die Erstellung eigener Fragenkataloge anzeigen
@@ -253,7 +170,7 @@ public class SettingsActivity extends AppCompatActivity {
 
                         chooserIntent.putExtra(DirectoryChooserActivity.EXTRA_CONFIG, config);
 
-// REQUEST_DIRECTORY is a constant integer to identify the request, e.g. 0
+                    // REQUEST_DIRECTORY is a constant integer to identify the request, e.g. 0
                         startActivityForResult(chooserIntent, REQUEST_DIRECTORY);
                     /*}else {
                         Toast.makeText(SettingsActivity.this, "Keine Berechtigung gegeben!", Toast.LENGTH_SHORT).show();
@@ -285,27 +202,6 @@ public class SettingsActivity extends AppCompatActivity {
                 }
             });
         }
-
-    //Zeigt den Dateibrowser an
-    private void showChooser() {
-        // Use the GET_CONTENT intent from the utility class
-        Intent target = tkapps.questionaire.afilechooser.utils.FileUtils.createGetContentIntent();
-        // Create the chooser Intent
-        Intent intent = Intent.createChooser(
-                target, getString(R.string.chooser_title));
-        try {
-            startActivityForResult(intent, REQUEST_CODE);
-        } catch (ActivityNotFoundException e) {
-            // The reason for the existence of aFileChooser
-        }
-    }
-
-    //Methode um die Knoten aus der XML auszulesen
-    private String getValue(String tag, Element element) {
-        NodeList nodeList = element.getElementsByTagName(tag).item(0).getChildNodes();
-        Node node = nodeList.item(0);
-        return node.getNodeValue();
-    }
 
     //Steuerung im Hilfe-Fenster
     public void exitHelp(){
