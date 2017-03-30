@@ -141,6 +141,7 @@ public class DataStore {
         return scorelist;
     }
 
+    //Löscht die Einträge der Bestenliste
     public void removeLeaderboard() {
     //Entfernt aktuelle Bestenliste
         db.execSQL("delete from " + DbSchema.ScoreTable.SCORENAME);

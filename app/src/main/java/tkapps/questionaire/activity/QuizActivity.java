@@ -1,16 +1,21 @@
 package tkapps.questionaire.activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.File;
 import java.util.List;
 
 import tkapps.questionaire.Answer;
@@ -27,6 +32,8 @@ public class QuizActivity extends AppCompatActivity {
     public static int amountQuestions = 0;
 
     private DataStore dataStore;
+    public SharedPreferences pref;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +50,21 @@ public class QuizActivity extends AppCompatActivity {
             TextView textView_scoreCounter = (TextView) findViewById(R.id.textView_scoreCounter);
             TextView textView_questionCounter = (TextView) findViewById(R.id.textView_questionCounter);
             TextView textView_Question = (TextView) findViewById(R.id.textView_question);
+            //ImageView initialisieren
+            ImageView imageView_Quiz = (ImageView) findViewById(R.id.imageView_Quiz);
+
+            //Logowechsel
+            pref = getSharedPreferences("Questionaire", MODE_PRIVATE);
+            if(!pref.getString("Logo", "").isEmpty()){
+                File imgFile = new  File(pref.getString("Logo", ""));
+
+                if(imgFile.exists()){
+                    Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+                    imageView_Quiz.setImageBitmap(myBitmap);
+                } else{
+                    Toast.makeText(this, "Logo wurde verschoben oder gelöscht.", Toast.LENGTH_SHORT).show();
+                }
+            }
 
             dataStore = DataStore.getInstance(getApplicationContext());
 

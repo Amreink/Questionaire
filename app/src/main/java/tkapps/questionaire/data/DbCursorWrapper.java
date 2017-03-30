@@ -47,6 +47,7 @@ public class DbCursorWrapper extends CursorWrapper {
         return new Interrogation(question, answers[0], answers[1], answers[2], answers[3]);
     }
 
+    //Methode für DataStore
     public ScoreListEntry getScore(){
         String name = getString(getColumnIndex(DbSchema.ScoreTable.Columns.NAME));
         String email = getString(getColumnIndex(DbSchema.ScoreTable.Columns.EMAIL));
