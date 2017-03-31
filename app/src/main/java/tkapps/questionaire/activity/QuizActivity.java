@@ -45,7 +45,7 @@ public class QuizActivity extends AppCompatActivity {
             questionCounter = 0;
             amountQuestions = 0;
             goToEnd();
-        }else {
+        } else {
 
             TextView textView_scoreCounter = (TextView) findViewById(R.id.textView_scoreCounter);
             TextView textView_questionCounter = (TextView) findViewById(R.id.textView_questionCounter);
@@ -55,14 +55,14 @@ public class QuizActivity extends AppCompatActivity {
 
             //Logowechsel
             pref = getSharedPreferences("Questionaire", MODE_PRIVATE);
-            if(!pref.getString("Logo", "").isEmpty()){
-                File imgFile = new  File(pref.getString("Logo", ""));
+            if (!pref.getString("Logo", "").isEmpty()) {
+                File imgFile = new File(pref.getString("Logo", ""));
 
-                if(imgFile.exists()){
+                if (imgFile.exists()) {
                     Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
                     imageView_Quiz.setImageBitmap(myBitmap);
-                } else{
-                    Toast.makeText(this, "Logo wurde verschoben oder gelöscht.", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, getString(R.string.logoMovedOrDeleted), Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -70,7 +70,7 @@ public class QuizActivity extends AppCompatActivity {
 
             //Holt die Fragestellungen (Interrogation) aus der DB
             List<Interrogation> interrogations = dataStore.getQuestions();
-
+            //Gesamtzahl der Fragen
             amountQuestions = dataStore.getAmountQuestions();
 
             //Aktuelle Frage und Antworten vorbereiten
@@ -103,7 +103,7 @@ public class QuizActivity extends AppCompatActivity {
                     Intent intent = getIntent();
                     finish();
                     startActivity(intent);
-                    Toast.makeText(QuizActivity.this, "Frage übersprungen.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuizActivity.this, getString(R.string.questionSkipped), Toast.LENGTH_SHORT).show();
                 }
             });
 
@@ -112,10 +112,10 @@ public class QuizActivity extends AppCompatActivity {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     Answer answer = (Answer) parent.getItemAtPosition(position);
-
-                    String meldung = "Antwort ist falsch!";
+                    //Prüfen ob Antwort korrekt ist
+                    String meldung = getString(R.string.answerWrong);
                     if (answer.isCorrect()) {
-                        meldung = "Antwort ist richtig!";
+                        meldung = getString(R.string.answerRight);
                         scoreCounter += 5;
                     } else {
                         scoreCounter -= 3;
@@ -132,10 +132,10 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     //Punkteübersicht nach dem Quiz
-    public void goToEnd(){
+    public void goToEnd() {
         setContentView(R.layout.activity_overview);
 
-        TextView textView_endScore = (TextView)findViewById(R.id.textView_endScore);
+        TextView textView_endScore = (TextView) findViewById(R.id.textView_endScore);
         textView_endScore.setText(Integer.toString(scoreCounter));
 
         Button button_goOn = (Button) findViewById(R.id.button_goOn);

@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 // Should we show an explanation?
                 // Nicht nötig da Berechtigung angefragt wird
                 if (!toastShown) {
-                    Toast.makeText(this, "Die App muss einen Ordner anlegen.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, getString(R.string.got2CreateFolder), Toast.LENGTH_SHORT).show();
                     toastShown = true;
                 }
                 //App um 2 Sekunden verzögern, damit Nutzer Zeit hat den Toast zu lesen
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                             // Show an explanation to the user *asynchronously* -- don't block
                             // this thread waiting for the user's response! After the user
                             // sees the explanation, try again to request the permission.
-                            Toast.makeText(MainActivity.this, "Die App muss nur einen Ordner für die XML anlegen. Es geschieht nichts mit Ihren Daten.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, getString(R.string.permissionMessage), Toast.LENGTH_SHORT).show();
                             Handler handler1 = new Handler();
                             handler1.postDelayed(new Runnable() {
                                 public void run() {
@@ -96,7 +96,6 @@ public class MainActivity extends AppCompatActivity {
                 permGranted();
             }
         } else {
-            Toast.makeText(this, "Unter 23", Toast.LENGTH_SHORT).show();
             permGranted();
         }
     }
@@ -147,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
                 Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
                 imageView_mainCompany.setImageBitmap(myBitmap);
             } else{
-                Toast.makeText(this, "Logo wurde verschoben oder gelöscht.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.logoMovedOrDeleted), Toast.LENGTH_SHORT).show();
             }
         }
 
@@ -160,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
                 amountQuestions = dataStore.getAmountQuestions();
                 //Beim klick auf Starten prüfen ob Fragenkatalog vorhanden ist
                 if (amountQuestions == 0) {
-                    Toast.makeText(MainActivity.this,"Kein Fragenkatalog vorhanden",Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, getString(R.string.noXML),Toast.LENGTH_LONG).show();
                 } else {
                     Intent intent = new Intent(MainActivity.this, QuizActivity.class);
                     startActivity(intent);
@@ -181,7 +180,7 @@ public class MainActivity extends AppCompatActivity {
         button_help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                exitHelp();
+                showHelp();
             }
         });
 
@@ -197,7 +196,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
    //Beim klick auf Hilfe landet man hier - Logik für Hilfsansicht
-    public void exitHelp(){
+    public void showHelp(){
         setContentView(R.layout.activity_help);
         TextView textView_help = (TextView)findViewById(R.id.textView_help);
         textView_help.setText(R.string.help_main);

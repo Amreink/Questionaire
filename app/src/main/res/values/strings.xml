@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Questionaire</string>
     <string name="logo_description">Firmenlogo</string>
+    <string name="got2CreateFolder">Die App muss einen Ordner anlegen.</string>
+    <string name="permissionMessage">Die App muss nur einen Ordner für die XML anlegen. Es geschieht nichts mit Ihren Daten.</string>
     <string name="questionaire">Questionaire</string>
     <string name="start">Starten</string>
     <string name="settings">Einstellungen</string>
@@ -10,6 +12,7 @@
     <string name="xml_help">Hilfe</string>
     <string name="export">Export</string>
     <string name="xml_path">Dateipfad</string>
+    <string name="noXML">Kein Fragenkatalog vorhanden.</string>
     <string name="enter_password">Passworteingabe</string>
     <string name="setup_password">Passwort festlegen</string>
     <string name="change_password">Passwort ändern</string>
@@ -19,6 +22,9 @@
     <string name="confirm">Bestätigen</string>
     <string name="score">Punkte</string>
     <string name="question">Frage</string>
+    <string name="questionSkipped">Frage übersprungen.</string>
+    <string name="answerRight">Antwort ist richtig!</string>
+    <string name="answerWrong">Antwort ist falsch!</string>
     <string name="goOn">Weiter</string>
     <string name="empty_directory">Leerer Ordner</string>
     <string name="storage_removed">Speicher wurde entferntet.</string>
@@ -28,6 +34,7 @@
     <string name="chooser_xml">Wähle XML-Datei aus</string>
     <string name="chooser_img">Wähle eine Bild-Datei aus</string>
     <string name="logo">Firmenzeichen</string>
+    <string name="logoMovedOrDeleted">Logo wurde verschoben oder gelöscht.</string>
     <string name="change_logo">Firmenzeichen ändern</string>
     <string name="result">Ergebnis:</string>
     <string name="skip">Überspringen</string>
@@ -43,18 +50,19 @@
     <string name="badNameEmail">Name und Email ungütlig.</string>
     <string name="dataSaved">Daten gespeichert.</string>
     <string name="resetLeaderboard">Bestenliste zurückgesetzt.</string>
+    <string name="csvExportSuccessful">CSV erfolgreich exportiert.</string>
+    <string name="csvNoEntry">Kein Eintrag vorhanden.</string>
     <string name="registerForLeaderboard">Hier können Sie sich für die Bestenliste registrieren:</string>
     <string name="gtct">*: Ihre E-Mail wird nicht an Dritte weitergegeben. Wir verwenden sie lediglich zur Kontaktaufnahme.</string>
 
     <string name="help_main">Beim ersten Aufrufen der "Einstellungen" müssen Sie ein Passwort
         festlegen. Vergessen Sie das Passwort nicht, es schützt Ihre Einstellungen vor unbefugten Änderungen.\n\n
         Um das Quiz starten zu können müssen Sie zunächst in den "Einstellungen" einen Fragenkatalog importieren.
-        Genauere Anweisungen finden Sie in den "Einstellungen" unter "Fragenkatalog".\n\n
+        Genauere Anweisungen finden Sie in den "Einstellungen" unter "Fragenkatalog", über das "Fragezeichen".\n\n
         Punkteverteilung:\n
         Korrekte Antwort: 5 Punkte\n
         Falsche Antwort: -3 Punkte\n
-        Frage überspringen: -1 Punkt
-    </string>
+        Frage überspringen: -1 Punkt</string>
 
     <string name="help_xml">Import:\n Um einen Fragenkatalog zu importieren tippen Sie bitte auf "Import". Suchen
         Sie anschließend mit dem Datei-Browser die gewünschte XML-Datei aus.\n\n
